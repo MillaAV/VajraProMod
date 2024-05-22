@@ -7,29 +7,26 @@ import ic2.core.IC2;
 import ic2.core.Ic2Items;
 import ic2.core.init.InternalName;
 import ic2.core.item.BaseElectricItem;
+import ic2.core.item.ItemBattery;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class ItemBattery extends BaseElectricItem {
-    public ItemBattery(InternalName internalName, double maxCharge, double transferLimit, int tier) {
-        super(internalName, maxCharge, transferLimit, tier);
+import java.util.HashSet;
+
+public class ItemBat extends BaseElectricItem {
+    public double maxCharge, transferLimit;
+    public int tier;
+    public ItemBat() {
+        super(InternalName.itemBatCrystal, 122, 22,3);
+        this.maxCharge = 5000000;
+        this.transferLimit = 2048;
+        this.tier = 3;
     }
 
-    public String getTextureName(int index) {
-        return index < 5 ? this.getUnlocalizedName().substring(4) + "." + index : null;
-    }
-
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconFromDamage(int meta) {
-        if (meta <= 1) {
-            return this.textures[4];
-        } else {
-            return meta >= this.getMaxDamage() - 1 ? this.textures[0] : this.textures[3 - 3 * (meta - 2) / (this.getMaxDamage() - 4 + 1)];
-        }
-    }
 
     public boolean canProvideEnergy(ItemStack itemStack) {
         return true;
@@ -45,7 +42,7 @@ public class ItemBattery extends BaseElectricItem {
 
             for(int i = 0; i < 9; ++i) {
                 ItemStack stack = entityplayer.inventory.mainInventory[i];
-                if (stack != null && !(stack.getItem() instanceof ic2.core.item.ItemBattery)) {
+                if (stack != null && !(stack.getItem() instanceof ItemBattery)) {
                     double transfer = ElectricItem.manager.discharge(itemStack, 2.0 * this.transferLimit, Integer.MAX_VALUE, true, true, true);
                     if (!(transfer <= 0.0)) {
                         transfer = ElectricItem.manager.charge(stack, transfer, this.tier, true, false);

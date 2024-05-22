@@ -24,16 +24,22 @@ public class ItemRegistry {
     public static Item superconductor;
     public static Item superconductorcover;
     public static Item vajracore;
-    public static Item ItemBatterys;
-    public static Item energyCrystals;
+    public static Item itemBatCrystal;
+    public static Item itemB;
 
     public static void init(){
 //        energyCrystal = new Item().setCreativeTab(CreativeTabs.tabTools).setTextureName("vajrapro:energyCrystal").setUnlocalizedName("energyCrystal");
 //        GameRegistry.registerItem(energyCrystal,"energyCrystal");
 //        ItemBattery.energyCrystal = new ItemStack(new ItemBattery(InternalName.itemBatCrystal, 2000000.0, 2048.0, 3));
 
-        energyCrystals = (new ItemBatterys(InternalName.itemBatCrystal, 1000000.0, 2048.0, 3)).setUnlocalizedName("energyCrystals").setTextureName("vajrapro:energyCrystals").setCreativeTab(CreativeTabs.tabTools);
-        GameRegistry.registerItem(energyCrystals,"energyCrystals");
+//        energyCrystal = (new ItemBatterys(InternalName.itemBatCrystal, 1000000.0, 2048.0, 3)).setUnlocalizedName("energyCrystal").setTextureName("vajrapro:energyCrystal").setCreativeTab(CreativeTabs.tabTools);
+//        GameRegistry.registerItem(energyCrystal,"energyCrystal");
+
+//        itemB = (new ItemBat(InternalName.itemBatCrystal)).setUnlocalizedName("itemB");
+//        GameRegistry.registerItem(itemB,"itemB");
+
+        itemB = new ItemBat().setCreativeTab(CreativeTabs.tabTools).setTextureName("vajrapro:itemB").setUnlocalizedName("itemB");
+        GameRegistry.registerItem(itemB,"itemB");
 
 
         vajraС = (new ItemVajraC(Item.ToolMaterial.EMERALD)).setUnlocalizedName("vajra");

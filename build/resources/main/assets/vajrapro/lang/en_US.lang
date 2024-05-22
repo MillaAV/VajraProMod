@@ -25,8 +25,12 @@ item.coolingcore.name=Cooling Core
 item.magnetron.name=Magnetron
 item.vajracore.name=Vajra Core
 
+ic2.itemB=Yellow Cristall
+
 item.tier1upgrade.name=Upgrade Vajra (Lvl 1)
 item.tier2upgrade.name=Upgrade Vajra (Lvl 2)
+
+tile.toolStantion.name=Module Stantion
 
 block.guitoolstation.name=Tool Station
 block.guitoolstation.skto="Silk Touch" module can not be combined

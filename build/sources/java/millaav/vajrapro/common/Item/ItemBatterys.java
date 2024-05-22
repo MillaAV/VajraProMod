@@ -13,8 +13,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class ItemBattery extends BaseElectricItem {
-    public ItemBattery(InternalName internalName, double maxCharge, double transferLimit, int tier) {
+public class ItemBatterys extends BaseElectricItem {
+    public ItemBatterys(InternalName internalName, double maxCharge, double transferLimit, int tier) {
         super(internalName, maxCharge, transferLimit, tier);
     }
 

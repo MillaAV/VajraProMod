@@ -28,9 +28,12 @@ public class ItemRegistry {
     public static Item energyCrystal;
 
     public static void init(){
-        itemBatCrystal = new Item().setCreativeTab(CreativeTabs.tabTools).setTextureName("vajrapro:itemBatCrystal").setUnlocalizedName("itemBatCrystal");
-        GameRegistry.registerItem(itemBatCrystal,"itemBatCrystal");
-        Ic2Items.energyCrystal = new ItemStack(new ItemBattery(InternalName.itemBatCrystal, 2000000.0, 2048.0, 3));
+//        energyCrystal = new Item().setCreativeTab(CreativeTabs.tabTools).setTextureName("vajrapro:energyCrystal").setUnlocalizedName("energyCrystal");
+//        GameRegistry.registerItem(energyCrystal,"energyCrystal");
+//        ItemBattery.energyCrystal = new ItemStack(new ItemBattery(InternalName.itemBatCrystal, 2000000.0, 2048.0, 3));
+
+        energyCrystal = (new ItemBattery(InternalName.itemBatCrystal, 1000000.0, 2048.0, 3)).setUnlocalizedName("energyCrystal").setTextureName("vajrapro:energyCrystal").setCreativeTab(CreativeTabs.tabTools);
+        GameRegistry.registerItem(energyCrystal,"energyCrystal");
 
 
         vajraС = (new ItemVajraC(Item.ToolMaterial.EMERALD)).setUnlocalizedName("vajra");

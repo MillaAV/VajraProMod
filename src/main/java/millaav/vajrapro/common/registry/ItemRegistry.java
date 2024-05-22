@@ -32,7 +32,7 @@ public class ItemRegistry {
 //        GameRegistry.registerItem(energyCrystal,"energyCrystal");
 //        ItemBattery.energyCrystal = new ItemStack(new ItemBattery(InternalName.itemBatCrystal, 2000000.0, 2048.0, 3));
 
-        energyCrystal = (new ItemBattery(new ItemBattery(InternalName.itemBatCrystal, 1000000.0, 2048.0, 3))).setUnlocalizedName("energyCrystal");
+        energyCrystal = (new ItemBattery(InternalName.itemBatCrystal, 1000000.0, 2048.0, 3)).setUnlocalizedName("energyCrystal").setTextureName("vajrapro:energyCrystal").setCreativeTab(CreativeTabs.tabTools);
         GameRegistry.registerItem(energyCrystal,"energyCrystal");
 
 

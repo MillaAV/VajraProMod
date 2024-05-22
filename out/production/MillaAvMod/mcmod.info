@@ -1,0 +1,17 @@
+[
+{
+  "modid": "lasercutter",
+  "name": "LaserCutter",
+  "description": "Laser Cutter - a handy tool for Great Builders.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "logoFile": "assets/lasercutter/textures/logo.png",
+  "url": "https://discord.gg/4FQJUZMEE7",
+  "updateUrl": "",
+  "authorList": ["MillaAV"],
+  "credits": "GoodBird",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

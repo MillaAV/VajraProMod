@@ -1,0 +1,75 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 23.03.24 18:11
+Description: Ticking memory connection
+
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
+	at java.util.ArrayList$Itr.next(ArrayList.java:861)
+	at millaav.vajrapro.common.Item.Test.onBlockDestroyed(Test.java:130)
+	at net.minecraft.item.ItemStack.func_150999_a(ItemStack.java:381)
+	at net.minecraft.server.management.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:314)
+	at net.minecraft.server.management.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:203)
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:523)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(C07PacketPlayerDigging.java:61)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(C07PacketPlayerDigging.java:94)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241)
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
+	at java.util.ArrayList$Itr.next(ArrayList.java:861)
+	at millaav.vajrapro.common.Item.Test.onBlockDestroyed(Test.java:130)
+	at net.minecraft.item.ItemStack.func_150999_a(ItemStack.java:381)
+	at net.minecraft.server.management.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:314)
+	at net.minecraft.server.management.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:203)
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:523)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(C07PacketPlayerDigging.java:61)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(C07PacketPlayerDigging.java:94)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@3233ff00
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_402, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 930246664 bytes (887 MB) / 1118306304 bytes (1066 MB) up to 3787980800 bytes (3612 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	IC2{2.2.827-experimental} [IndustrialCraft 2] (industrialcraft-2-deobf.jar) 
+	UCHIJAAAA	vajrapro{1.0.0} [VajraPro] (MillaAVMod-1.0.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player703'/412, l='New World', x=54,67, y=23,00, z=196,47]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

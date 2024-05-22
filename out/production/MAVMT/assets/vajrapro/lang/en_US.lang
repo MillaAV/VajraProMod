@@ -1,0 +1,27 @@
+item.vajra.name=Vajra
+item.vajrap.name=Vajra Pro
+item.vajram.name=Vajra Max
+item.test.name=Vajra
+
+item.upgrade.hoe.name=Module Hoe
+item.upgrade.automelting.name=Module Auto-Melting
+item.moduleexpansionDig.name=Module Expansion Dig
+item.moduleattackradius.name=Module Attack Radius
+item.upgrade.depth.name=Module Depth
+item.upgrade.damage.name=Module Damage
+item.upgrade.range.name=Module Range
+item.upgrade.fortuna.name=Module Fortuna
+item.upgrade.silktouch.name=Module SilkTouch
+
+
+item.test.radiusattack=AOE Attack:
+item.test.r=AOE Digging:
+item.test.stag=Stage:
+item.test.hoe=Hoe:
+item.test.hoe1=Enabled
+item.test.hoe2=Disabled
+message.text.enabled=enabled
+message.text.disabled=disabled
+message.vajra.silkTouchMode=Silk touch mode
+message.vajra.silkTouchDisabled=Can't change tool mode ! Accurate mode disabled in config  file !
+

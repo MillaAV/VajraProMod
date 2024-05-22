@@ -1,0 +1,46 @@
+item.vajra.name=Vajra
+item.vajrap.name=Vajra Pro
+item.vajram.name=Vajra Max
+item.test.name=Vajra
+
+item.upgrade.hoe.name=Module Hoe (Lvl 1)
+item.upgrade.automelting.name=Module Auto-Melting (Lvl 1)
+item.moduleexpansionDig.name=Module Expansion Dig (Lvl 1)
+item.moduleattackradius.name=Module Attack Radius (Lvl 1)
+item.upgrade.depth.name=Module Depth 3x3 (Lvl 1)
+item.upgrade.depth1.name=Module Depth 5x5 (Lvl 2)
+item.upgrade.depth2.name=Module Depth 7x7 (Lvl 3)
+item.upgrade.damage.name=Module Damage (Lvl 1)
+item.upgrade.damage1.name=Module Damage (Lvl 2)
+item.upgrade.damage2.name=Module Damage (Lvl 3)
+item.upgrade.range.name=Module Range (Lvl 1)
+item.upgrade.fortuna.name=Module Fortuna (Lvl 1)
+item.upgrade.fortuna1.name=Module Fortuna (Lvl 2)
+item.upgrade.fortuna2.name=Module Fortuna (Lvl 3)
+item.upgrade.silktouch.name=Module SilkTouch (Lvl 1)
+
+item.superconductorcover.name=Super Conductor Cover
+item.superconductor.name=Super Conductor
+item.coolingcore.name=Cooling Core
+item.magnetron.name=Magnetron
+item.vajracore.name=Vajra Core
+
+item.tier1upgrade.name=Upgrade Vajra (Lvl 1)
+item.tier2upgrade.name=Upgrade Vajra (Lvl 2)
+
+block.guitoolstation.name=Tool Station
+block.guitoolstation.skto="Silk Touch" module can not be combined
+block.guitoolstation.with=with "Fortune" and "Auto-melting" modules
+
+
+item.test.radiusattack=AOE Attack:
+item.test.r=AOE Digging:
+item.test.stag=Stage:
+item.test.hoe=Hoe:
+item.test.hoe1=Enabled
+item.test.hoe2=Disabled
+message.text.enabled=enabled
+message.text.disabled=disabled
+message.vajra.silkTouchMode=Silk touch mode
+message.vajra.silkTouchDisabled=Can't change tool mode ! Accurate mode disabled in config  file !
+

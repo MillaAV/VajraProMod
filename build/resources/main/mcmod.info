@@ -1,0 +1,17 @@
+[
+{
+  "modid": "vajrapro",
+  "name": "VajraPro",
+  "description": "VajraPro? OMG! ",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "logoFile": "assets/vajrapro/textures/logo.png",
+  "url": "https://discord.gg/4FQJUZMEE7",
+  "updateUrl": "",
+  "authorList": ["MillaAV"],
+  "credits": "GoodBird, globii",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

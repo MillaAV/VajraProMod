@@ -1,0 +1,46 @@
+buildscript {
+	repositories {
+		mavenCentral()
+        maven {
+            name = "github"
+            url = "https://github.com/juanmuscaria/maven/raw/master"
+        }
+	}
+	dependencies {
+		classpath 'net.minecraftforge.gradle:ForgeGradle:[1.2-1.4.6-SNAPSHOT,)'
+	}
+}
+
+
+apply plugin: 'forge'
+
+version = "1.0"
+group= ""
+archivesBaseName = "MillaAVMod"
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceCompatibility = targetCompatibility = '1.8'
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir = "eclipse"
+}
+
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+	compile name: 'industrialcraft-2-deobf'
+	compile name: 'CodeChickenCore-1.7.10-1.0.7.48-universal-deobf'
+    	compile name: 'LuckyRecipeMaker-1.0-deobf'
+    	compile name: 'minetweaker3-1.7.10-3.0.10b-deobf'
+    	compile name: 'NotEnoughItems-1.7.10-1.0.5.120-universal-deobf'
+    	compile name: 'codechickenlib-1.2.1-deobf'
+	compile name: 'gravisuite-1.7.10-2.0.3-deobf'
+}

@@ -9,6 +9,7 @@ import ic2.api.item.IElectricItem;
 import millaav.vajrapro.common.Item.ConfigTest;
 import millaav.vajrapro.common.Item.EnumUpgradeType;
 import millaav.vajrapro.common.Item.Hoe;
+import millaav.vajrapro.common.handler.EventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.client.Minecraft;
@@ -53,49 +54,32 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         if (world.isRemote) return stack;
         NBTTagCompound tag = getOrCreateTag(stack);
         int curRad = tag.getInteger("radius");
-        tag.setInteger("radius", (curRad + 1) % (getVajraTier()+2) );
+//        int tier = ((ItemVajra)stack.getItem()).getVajraTier();
+        tag.setInteger("radius", (curRad + 1) % (getVajraTier()+2));
         tag.setInteger("charge", getCutEnergy(stack));
-        tag.setFloat("radiusa",1.0F);
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE)){attackDamage=21;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.RANGE)){tag.setFloat("radiusa",5.0F);}
-
-
-
-
+        tag.setInteger("depth", 0);
 
 
         if (curRad == 3) {
-            efficiencyOnProperMaterial = 2000.0F;
-            if(maxCharge == 3000000){epo = 3333;}else if(maxCharge == 18000000){epo = 6666;}else if(maxCharge == 9999){epo = 9999;}
             tag.setInteger("radius", 0);
             player.addChatMessage(new ChatComponentText("Mode: 1x1"));
-            tag.setBoolean("isHoe", false);
-//            tag.setBoolean("Super", true); удача
+            tag.setBoolean("Super", false);
+//            tag.setBoolean("isHoe", false);
         }
         if (curRad == 0) {
-            efficiencyOnProperMaterial = 45.9F;
             tag.setInteger("radius", 1);
             player.addChatMessage(new ChatComponentText("Mode: 3x3"));
-            tag.setBoolean("isHoe", false);
             tag.setBoolean("Super", false);
         }
         if (curRad == 1) {
-            efficiencyOnProperMaterial = 45.0F;
-            tag.setInteger("depth", 0);
             tag.setInteger("radius", 2);
             player.addChatMessage(new ChatComponentText("Mode: 5x5"));
-            tag.setBoolean("isHoe", false);
             tag.setBoolean("Super", false);
         }
         if (curRad == 2) {
-            efficiencyOnProperMaterial = 45.0F;
-            attackDamage = 333333333;
             tag.setInteger("radius", 3);
-            player.addChatMessage(new ChatComponentText("Mode: Hoe"));
+            player.addChatMessage(new ChatComponentText("Mode: 7x7"));
             tag.setBoolean("Super", false);
-            tag.setBoolean("isHoe", true);
         }
         return super.onItemRightClick(stack, world, player);
     }
@@ -122,10 +106,17 @@ public class ItemVajra extends ItemTool implements IElectricItem {
 
     public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
         if (ItemVajra.hasUpgrade(stack, EnumUpgradeType.HOE)) {
+            player.addChatMessage(new ChatComponentText("Mode: Hoe"));
             Hoe hoe = new Hoe();
             hoe.operationEnergyCost = effPower;
             hoe.onItemUse(stack, player, world, x, y, z, side);
         }
+        NBTTagCompound tag = getOrCreateTag(stack);
+        tag.setFloat("radiusa",1.0F);
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE)){attackDamage=21;}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.RANGE)){tag.setFloat("radiusa",5.0F);}
         return false;
     }
 
@@ -141,17 +132,20 @@ public class ItemVajra extends ItemTool implements IElectricItem {
 
 
     public static NBTTagCompound getOrCreateTag(ItemStack stack) {
+
         if (stack.stackTagCompound == null) {
             stack.stackTagCompound = new NBTTagCompound();
         }
         return stack.stackTagCompound;
     }
 
-    public Multimap getAttributeModifiers(ItemStack stack) {
-        Multimap<String, AttributeModifier> ret = HashMultimap.create();
-        ret.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Tool modifier", attackDamage, 0));
-        return ret;
-    }
+//    public Multimap getAttributeModifiers(ItemStack stack) {
+//        Multimap<String, AttributeModifier> ret = HashMultimap.create();
+//        ret.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Tool modifier", attackDamage, 0));
+//        return ret;
+//    }
+
+
     public Map<Block, Integer> getObliterationList(ItemStack stack) {
         Map<Block, Integer> blockMap = new HashMap<>();
         NBTTagCompound compound = ConfigTest.getCompound(stack);
@@ -368,9 +362,9 @@ public class ItemVajra extends ItemTool implements IElectricItem {
                     ++count;
                 }
 
-                if (count > 0 && !player.worldObj.isRemote) {
-                    player.worldObj.playSoundAtEntity(entity, "thaumcraft:swing", 1.0F, 0.9F + player.worldObj.rand.nextFloat() * 0.2F);
-                }
+//                if (count > 0 && !player.worldObj.isRemote) {
+//                    player.worldObj.playSoundAtEntity(entity, "thaumcraft:swing", 1.0F, 0.9F + player.worldObj.rand.nextFloat() * 0.2F);
+//                }
             }
         }
 

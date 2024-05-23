@@ -141,7 +141,7 @@ public class RecipeRegistry {
         //Vajra Core 2 lvl
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.vajracore1, 1),"CMC", "PFP","SVS",
                 'C', new ItemStack(Ic2Items.reactorCoolantSix.getItem(),1,1),
-                'F', new ItemStack(Ic2Items.mfeUnit.getItem(),1,32767),
+                'F', new ItemStack(Ic2Items.mfeUnit.getItem(),1,1),
                 'M', new ItemStack(ItemRegistry.magnetron1,1), 'P', Ic2Items.reactorPlatingExplosive,
                 'S', new ItemStack(ItemRegistry.superconductor, 1), 'V', new ItemStack(ItemRegistry.vajracore, 1));
 
@@ -149,6 +149,6 @@ public class RecipeRegistry {
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.vajracore2, 1),"CMC", "PFP","CVC",
                 'C', new ItemStack(Ic2Items.reactorCoolantSix.getItem(),1,1),
                 'M', new ItemStack(ItemRegistry.magnetron2,1), 'P', new ItemStack(ItemRegistry.coolingcore, 1),
-                'F', new ItemStack(Ic2Items.mfsukit.getItem(), 1, 32767), 'V', new ItemStack(ItemRegistry.vajracore1, 1));
+                'F', new ItemStack(Ic2Items.mfsUnit.getItem(), 1, 2), 'V', new ItemStack(ItemRegistry.vajracore1, 1));
     }
 }

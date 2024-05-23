@@ -39,9 +39,7 @@ block.guitoolstation.skto=Модуль "Шелковое касание" не с
 block.guitoolstation.with=с моделями "Удача" и "Авто-переплавка"
 
 
-item.test.radiusattack=AOE Attack:
 item.test.r=AOE Digging:
-item.test.stag=Stage:
 item.test.hoe=Мотыга:
 item.test.hoe1=Включено
 item.test.hoe2=Выключено

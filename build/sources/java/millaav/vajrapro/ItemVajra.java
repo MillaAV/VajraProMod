@@ -560,10 +560,8 @@ public class ItemVajra extends ItemTool implements IElectricItem {
     public void addInformation(ItemStack itemStack, EntityPlayer player, List info, boolean b) {
         super.addInformation(itemStack, player, info, b);
         NBTTagCompound tag = getOrCreateTag(itemStack);
-        info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.test.stag") + " " + EnumChatFormatting.GREEN + tag.getInteger("charge"));
         info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.test.r") + " " + EnumChatFormatting.GREEN + (1 + (tag.getInteger("radius") * 2)) +
                 "x" + (1 + (tag.getInteger("radius") * 2)));
-        info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.test.radiusattack") + " " + EnumChatFormatting.GREEN + tag.getFloat("radiusas"));
         if (tag.getBoolean("isHoe")) {
             info.add(EnumChatFormatting.LIGHT_PURPLE + StatCollector.translateToLocal("item.test.hoe") + " " + EnumChatFormatting.GREEN + StatCollector.translateToLocal("item.test.hoe1"));
         } else

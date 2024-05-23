@@ -2,7 +2,6 @@ package millaav.vajrapro.common.handler;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import millaav.vajrapro.ItemVajra;
-import millaav.vajrapro.VajraPro;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;

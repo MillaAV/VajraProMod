@@ -6,17 +6,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.relauncher.Side;
-import ic2.core.Ic2Items;
-import ic2.core.init.InternalName;
-import ic2.core.item.ItemBattery;
 import millaav.vajrapro.common.CommonProxy;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 @Mod(
@@ -55,8 +47,6 @@ public class VajraPro {
         System.out.println("[VajraPro] " + logString);
     }
 
-    public static boolean disableVajraAccurate;
-
     public static void dropAsEntity(World var0, int var1, int var2, int var3, ItemStack var4) {
         if (var4 != null) {
             double var5 = 0.7;
@@ -69,22 +59,4 @@ public class VajraPro {
         }
 
     }
-
-    public static String formatMessage(String inputString) {
-        ChatComponentTranslation cht = new ChatComponentTranslation(inputString, new Object[0]);
-        return StatCollector.translateToLocal(cht.getUnformattedTextForChat());
-    }
-
-    public static NBTTagCompound getOrCreateNbtData(ItemStack itemstack) {
-        NBTTagCompound nbttagcompound = itemstack.getTagCompound();
-        if (nbttagcompound == null) {
-            nbttagcompound = new NBTTagCompound();
-            itemstack.setTagCompound(nbttagcompound);
-            nbttagcompound.setInteger("charge", 0);
-        }
-
-        return nbttagcompound;
-    }
-
-
 }

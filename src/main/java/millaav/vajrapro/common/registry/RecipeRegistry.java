@@ -1,13 +1,9 @@
 package millaav.vajrapro.common.registry;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import ic2.core.AdvRecipe;
-import ic2.core.IC2;
 import ic2.core.Ic2Items;
 import millaav.vajrapro.common.Item.EnumUpgradeType;
-import millaav.vajrapro.common.block.BlockToolStation;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class RecipeRegistry {
@@ -35,7 +31,7 @@ public class RecipeRegistry {
 
         //Удача 2 уровня 5
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.FORTUNA1.ordinal()),"IPI","FDF","IPI",
-                'I', Ic2Items.iridiumPlate, 'P', new ItemStack(ItemRegistry.superconductor, 1),
+                'I', Ic2Items.iridiumPlate, 'P', new ItemStack(ItemRegistry.goldplatedenergycrystal, 1, 32767),
                 'D', new ItemStack(Ic2Items.iridiumDrill.getItem(),1,32767),
                 'F', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.FORTUNA.ordinal()));
 
@@ -118,44 +114,41 @@ public class RecipeRegistry {
 
 
         //УЛУЧШЕНИE НА ВАДЖРУ 1 УРОВНЯ
-        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.tier1upgrade, 1), "ILI", "A A", "ILI",
-                'I', Ic2Items.iridiumPlate, 'A', Ic2Items.advancedAlloy, 'L', new ItemStack(Ic2Items.lapotronCrystal.getItem(),1,32767));
+        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.tier1upgrade, 1), "ILI", "ACA", "ILI",
+                'I', Ic2Items.iridiumPlate, 'A', Ic2Items.advancedAlloy, 'L',
+                new ItemStack(ItemRegistry.goldplatedenergycrystal,1,32767), 'C', new ItemStack(ItemRegistry.vajracore1, 1));
 
         //УЛУЧШЕНИE НА ВАДЖРУ 2 УРОВНЯ
-        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.tier2upgrade, 1), "LUL", "C C", "LUL",
+        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.tier2upgrade, 1), "LUL", "CVC", "LUL",
                 'U', new ItemStack(ItemRegistry.tier1upgrade, 1), 'L', new ItemStack(Ic2Items.lapotronCrystal.getItem(),1,32767),
-                'C', new ItemStack(ItemRegistry.coolingcore, 1));
+                'C', new ItemStack(ItemRegistry.coolingcore, 1), 'V', new ItemStack(ItemRegistry.vajracore2, 1));
 
-//      //Желтый кристалл
-//        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.ЖЕЛТЫЙКРИСТАЛЛ, 1, 32767), "GPG", "GEG","GPG",
-//                'G', Ic2Items.goldDust, 'P', Ic2Items.electronicCircuit,
-//                'E', new ItemStack(Ic2Items.energyCrystal.getItem(), 1, 32767));
-//
-//        //Magnetron 2 lvl
-//        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.magnetron1, 1), "PCP", "MLM", "PCP",
-//                'P', Ic2Items.advancedCircuit, 'C', Ic2Items.carbonPlate, 'M', new ItemStack(ItemRegistry.magnetron, 1),
-//                'L', new ItemStack(Ic2Items.lapotronCrystal.getItem(), 1, 32767));
-//
-//        //Magnetron 3 lvl
-//        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1), "RSR","MCM", "RSR",
-//                'R', Ic2Items.reactorPlatingExplosive, 'S', new ItemStack(ItemRegistry.superconductor, 1),
-//                'M', new ItemStack(ItemRegistry.magnetron1, 1), 'C', new ItemStack(ItemRegistry.coolingcore, 1));
-//
-//        //Vajra Core 2 lvl
-//        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.vajracore1, 1),"CMC", "PFP","SVS",
-//                'C', new ItemStack(Ic2Items.reactorCoolantSix.getItem(),1,1),
-//                'F', new ItemStack(Ic2Items.mfeUnit.getItem(),1,32767),
-//                'M', new ItemStack(ItemRegistry.magnetron,1), 'P', Ic2Items.reactorPlatingExplosive,
-//                'S', new ItemStack(ItemRegistry.superconductor, 1), 'V', new ItemStack(ItemRegistry.vajracore, 1));
-//
-//        //Vajra Core 3 lvl
-//        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.vajracore2, 1),"CMC", "PFP","CVC",
-//                'C', new ItemStack(Ic2Items.reactorCoolantSix.getItem(),1,1),
-//                'M', new ItemStack(ItemRegistry.magnetron1,1), 'P', new ItemStack(ItemRegistry.coolingcore, 1),
-//                'F', new ItemStack(Ic2Items.mfsukit.getItem(), 1, 32767), 'V', new ItemStack(ItemRegistry.vajracore, 1));
+      //Желтый кристалл
+        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.goldplatedenergycrystal, 1, 32767), "GPG", "GEG","GPG",
+                'G', Ic2Items.goldDust, 'P', Ic2Items.electronicCircuit,
+                'E', new ItemStack(Ic2Items.energyCrystal.getItem(), 1, 32767));
 
-//      AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.RANGE.ordinal()));
-//
+        //Magnetron 2 lvl
+        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.magnetron1, 1), "PCP", "MLM", "PCP",
+                'P', Ic2Items.advancedCircuit, 'C', Ic2Items.carbonPlate, 'M', new ItemStack(ItemRegistry.magnetron, 1),
+                'L', new ItemStack(Ic2Items.lapotronCrystal.getItem(), 1, 32767));
 
+        //Magnetron 3 lvl
+        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.magnetron2, 1), "RSR","MCM", "RSR",
+                'R', Ic2Items.reactorPlatingExplosive, 'S', new ItemStack(ItemRegistry.superconductor, 1),
+                'M', new ItemStack(ItemRegistry.magnetron1, 1), 'C', new ItemStack(ItemRegistry.coolingcore, 1));
+
+        //Vajra Core 2 lvl
+        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.vajracore1, 1),"CMC", "PFP","SVS",
+                'C', new ItemStack(Ic2Items.reactorCoolantSix.getItem(),1,1),
+                'F', new ItemStack(Ic2Items.mfeUnit.getItem(),1,32767),
+                'M', new ItemStack(ItemRegistry.magnetron1,1), 'P', Ic2Items.reactorPlatingExplosive,
+                'S', new ItemStack(ItemRegistry.superconductor, 1), 'V', new ItemStack(ItemRegistry.vajracore, 1));
+
+        //Vajra Core 3 lvl
+        AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.vajracore2, 1),"CMC", "PFP","CVC",
+                'C', new ItemStack(Ic2Items.reactorCoolantSix.getItem(),1,1),
+                'M', new ItemStack(ItemRegistry.magnetron2,1), 'P', new ItemStack(ItemRegistry.coolingcore, 1),
+                'F', new ItemStack(Ic2Items.mfsukit.getItem(), 1, 32767), 'V', new ItemStack(ItemRegistry.vajracore1, 1));
     }
 }

@@ -1,5 +1,51 @@
-item.vajrac.name=Ваджра
+item.vajra.name=Ваджра
 item.vajrap.name=Ваджра Pro
 item.vajram.name=Ваджра Max
-item.test.name=Ваджра
-item.test.ss=Энергии
+
+item.upgrade.hoe.name=Модуль Мотыга (Lvl 1)
+item.upgrade.automelting.name=Модуль Авто-переплавка (Lvl 1)
+item.upgrade.depth.name=Модуль Глубина копания 3x3 (Lvl 1)
+item.upgrade.depth1.name=Модуль Глубина копания 5x5 (Lvl 2)
+item.upgrade.depth2.name=Модуль Глубина копания 7x7 (Lvl 3)
+item.upgrade.damage.name=Модуль Урон 21 (Lvl 1)
+item.upgrade.damage1.name=Модуль Урон 61 (Lvl 2)
+item.upgrade.damage2.name=Модуль Урон 121 (Lvl 3)
+item.upgrade.range.name=Модуль Радиус атаки 5 (Lvl 1)
+item.upgrade.fortuna.name=Модуль Удача 3 (Lvl 1)
+item.upgrade.fortuna1.name=Модуль Удача 5 (Lvl 2)
+item.upgrade.fortuna2.name=Модуль Удача 10 (Lvl 3)
+item.upgrade.silktouch.name=Модуль Шелковое касание (Lvl 1)
+
+item.superconductorcover.name=Часть сверхпроводника
+item.superconductor.name=Сверхпроводник
+item.coolingcore.name=Охлождающее ядро
+item.magnetron.name=Магнетрон (Lvl 1)
+item.magnetron1.name=Магнетрон (Lvl 2)
+item.magnetron2.name=Магнетрон (Lvl 3)
+item.vajracore.name=Ядро ваджры (Lvl 1)
+item.vajracore1.name=Ядро ваджры (Lvl 2)
+item.vajracore2.name=Ядро ваджры (Lvl 3)
+
+ic2.goldplatedenergycrystal=Позолоченный энергетический кристалл
+
+
+item.tier1upgrade.name=Улучшение ваджры (Lvl 1)
+item.tier2upgrade.name=Улучшение ваджры (Lvl 2)
+
+tile.toolStantion.name=Модульная станция
+
+block.guitoolstation.name=Модульная станция
+block.guitoolstation.skto=Модуль "Шелковое касание" не совместим
+block.guitoolstation.with=с моделями "Удача" и "Авто-переплавка"
+
+
+item.test.radiusattack=AOE Attack:
+item.test.r=AOE Digging:
+item.test.stag=Stage:
+item.test.hoe=Мотыга:
+item.test.hoe1=Включено
+item.test.hoe2=Выключено
+message.text.enabled=включено
+message.text.disabled=выключено
+message.vajra.silkTouchMode=Шелковое касание вкл.
+message.vajra.silkTouchDisabled=Не удается изменить режим работы инструмента!

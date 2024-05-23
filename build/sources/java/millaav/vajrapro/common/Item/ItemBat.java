@@ -1,36 +1,67 @@
 package millaav.vajrapro.common.Item;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import ic2.api.item.ElectricItem;
 import ic2.core.IC2;
 import ic2.core.Ic2Items;
 import ic2.core.init.InternalName;
 import ic2.core.item.BaseElectricItem;
 import ic2.core.item.ItemBattery;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 
 public class ItemBat extends BaseElectricItem {
     public double transferLimit;
     public int tier;
+
     public ItemBat() {
-        super(InternalName.itemBatCrystal, 5000000, 2048,3);
+        super(InternalName.itemBatCrystal, 5000000, 2048, 3);
     }
 
-//    public String getTextureName(int index) {
-//        return index < 5 ? this.getUnlocalizedName().substring(4) + "." + index : null;
-//    }
-//
-//    @SideOnly(Side.CLIENT)
-//    public IIcon getIconFromDamage(int meta) {
-//        if (meta <= 1) {
-//            return this.textures[4];
-//        } else {
-//            return meta >= this.getMaxDamage() - 1 ? this.textures[0] : this.textures[3 - 3 * (meta - 2) / (this.getMaxDamage() - 4 + 1)];
-//        }
-//    }
+    public String getTextureName(int index) {
+        if (index == 0) {
+            return "goldplatedenergycrystal0";
+        }
+        if (index == 1) {
+            return "goldplatedenergycrystal1";
+        }
+        return null;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public IIcon getIconFromDamage(int meta) {
+        if (meta == 1) {
+            return this.textures[1];
+        } else {
+            return this.textures[0];
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister iconRegister) {
+        int indexCount = 0;
+
+        while(this.getTextureName(indexCount) != null) {
+            ++indexCount;
+            if (indexCount > 32767) {
+                throw new RuntimeException("More Item Icons than actually possible @ " + this.getUnlocalizedName());
+            }
+        }
+
+        this.textures = new IIcon[indexCount];
+        String textureFolder = this.getTextureFolder() == null ? "" : this.getTextureFolder() + "/";
+
+        for(int index = 0; index < indexCount; ++index) {
+            this.textures[index] = iconRegister.registerIcon("vajrapro" + ":" + textureFolder + this.getTextureName(index));
+        }
+
+    }
 
     public boolean canProvideEnergy(ItemStack itemStack) {
         return true;
@@ -62,7 +93,6 @@ public class ItemBat extends BaseElectricItem {
                 entityplayer.openContainer.detectAndSendChanges();
             }
         }
-
         return itemStack;
     }
 }

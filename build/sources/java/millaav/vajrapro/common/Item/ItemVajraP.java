@@ -2,31 +2,24 @@ package millaav.vajrapro.common.Item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
 import millaav.vajrapro.ItemVajra;
-import millaav.vajrapro.VajraPro;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
 
 import java.util.HashSet;
-import java.util.List;
 
 public class ItemVajraP extends ItemVajra implements IElectricItem {
     public ItemVajraP(Item.ToolMaterial toolMaterial) {
         super(0.0F, toolMaterial, new HashSet());
-        this.setMaxDamage(27);
         this.maxCharge = 18000000;
-        this.tier = 2;
         this.transferLimit = 120000;
         this.effPower = 2000.0F;
         this.efficiencyOnProperMaterial = this.effPower;
-        this.energyPerOperation = 3333;
+        this.epo = 9999;
         this.setCreativeTab(CreativeTabs.tabTools);
     }
 

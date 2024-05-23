@@ -6,7 +6,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
-import millaav.vajrapro.common.CommonProxy;
 import millaav.vajrapro.common.Item.ConfigTest;
 import millaav.vajrapro.common.Item.EnumUpgradeType;
 import millaav.vajrapro.common.Item.Hoe;

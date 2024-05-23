@@ -1,7 +1,6 @@
 item.vajra.name=Vajra
 item.vajrap.name=Vajra Pro
 item.vajram.name=Vajra Max
-item.test.name=Vajra
 
 item.upgrade.hoe.name=Module Hoe (Lvl 1)
 item.upgrade.automelting.name=Module Auto-Melting (Lvl 1)
@@ -22,10 +21,15 @@ item.upgrade.silktouch.name=Module SilkTouch (Lvl 1)
 item.superconductorcover.name=Super Conductor Cover
 item.superconductor.name=Super Conductor
 item.coolingcore.name=Cooling Core
-item.magnetron.name=Magnetron
-item.vajracore.name=Vajra Core
+item.magnetron.name=Magnetron (Lvl 1)
+item.magnetron1.name=Magnetron (Lvl 2)
+item.magnetron2.name=Magnetron (Lvl 3)
+item.vajracore.name=Vajra Core (Lvl 1)
+item.vajracore1.name=Vajra Core (Lvl 2)
+item.vajracore2.name=Vajra Core (Lvl 3)
 
-ic2.itemB=Yellow Cristall
+ic2.goldplatedenergycrystal=Gold-plated energy crystal
+
 
 item.tier1upgrade.name=Upgrade Vajra (Lvl 1)
 item.tier2upgrade.name=Upgrade Vajra (Lvl 2)

@@ -1,7 +1,9 @@
 package millaav.vajrapro.common.handler;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import millaav.vajrapro.common.Item.Test;
+import millaav.vajrapro.ItemVajra;
+import millaav.vajrapro.VajraPro;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.event.world.BlockEvent;
@@ -13,7 +15,7 @@ public class EventHandler {
     public void onBlockDropsEvent(BlockEvent.HarvestDropsEvent event){
         if(event.harvester==null) return;
         if(event.harvester.getHeldItem() == null) return;
-        if(!(event.harvester.getHeldItem().getItem() instanceof Test)) return;
+        if(!(event.harvester.getHeldItem().getItem() instanceof ItemVajra)) return;
         ArrayList<ItemStack> newDrops = new ArrayList<>();
         for(ItemStack stack : event.drops){
             ItemStack smeltingRes = FurnaceRecipes.smelting().getSmeltingResult(stack);

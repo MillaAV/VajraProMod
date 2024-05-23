@@ -22,13 +22,11 @@ import java.util.List;
 public class ItemVajraC extends ItemVajra implements IElectricItem {
         public ItemVajraC(Item.ToolMaterial toolMaterial) {
         super(0.0F, toolMaterial, new HashSet());
-        this.setMaxDamage(27);
         this.maxCharge = 3000000;
-        this.tier = 2;
         this.transferLimit = 60000;
         this.effPower = 2000.0F;
         this.efficiencyOnProperMaterial = this.effPower;
-        this.energyPerOperation = 3333;
+        this.epo = 3333;
         this.setCreativeTab(CreativeTabs.tabTools);
     }
 

@@ -1,5 +1,7 @@
 package millaav.vajrapro.common.Item;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import ic2.api.item.ElectricItem;
 import ic2.core.IC2;
 import ic2.core.Ic2Items;
@@ -9,6 +11,7 @@ import ic2.core.item.ItemBattery;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 
@@ -31,6 +34,7 @@ public class ItemBat extends BaseElectricItem {
 //            return meta >= this.getMaxDamage() - 1 ? this.textures[0] : this.textures[3 - 3 * (meta - 2) / (this.getMaxDamage() - 4 + 1)];
 //        }
 //    }
+
 
     public boolean canProvideEnergy(ItemStack itemStack) {
         return true;

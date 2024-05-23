@@ -23,18 +23,12 @@ public class ItemVajraM extends ItemVajra implements IElectricItem {
     public ItemVajraM(Item.ToolMaterial toolMaterial) {
         super(0.0F, toolMaterial, new HashSet());;
         setCreativeTab(CreativeTabs.tabTools);
-        setUnlocalizedName("test");
         setMaxStackSize(1);
-        setTextureName("vajrapro:test");
-        this.tier = 2;
         this.maxCharge = 18000000;
         this.transferLimit = 600000;
         this.effPower = 2000.0F;
         this.efficiencyOnProperMaterial = effPower;
-        this.energyPerOperation = 3333;
-        this.setHarvestLevel("pickaxe", 10);
-        this.setHarvestLevel("axe", 10);
-        this.setHarvestLevel("shovel", 10);
+        this.epo = 29997;
     }
 
     @SideOnly(Side.CLIENT)

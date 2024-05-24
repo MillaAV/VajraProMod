@@ -1,7 +1,5 @@
 package millaav.vajrapro;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import ic2.api.item.ElectricItem;
@@ -9,7 +7,6 @@ import ic2.api.item.IElectricItem;
 import millaav.vajrapro.common.Item.ConfigTest;
 import millaav.vajrapro.common.Item.EnumUpgradeType;
 import millaav.vajrapro.common.Item.Hoe;
-import millaav.vajrapro.common.handler.EventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.client.Minecraft;
@@ -17,8 +14,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
@@ -54,32 +49,31 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         if (world.isRemote) return stack;
         NBTTagCompound tag = getOrCreateTag(stack);
         int curRad = tag.getInteger("radius");
-//        int tier = ((ItemVajra)stack.getItem()).getVajraTier();
-        tag.setInteger("radius", (curRad + 1) % (getVajraTier()+2));
+        int limit = 0;
+        if(getVajraTier()==1){
+            limit = 1;
+        }else if(getVajraTier()==2){
+            limit = 3;
+        }else if(getVajraTier()==3) {
+            limit = 4;
+        }
+
+        tag.setInteger("radius",(curRad+1)%limit);
         tag.setInteger("charge", getCutEnergy(stack));
         tag.setInteger("depth", 0);
 
 
         if (curRad == 3) {
-            tag.setInteger("radius", 0);
             player.addChatMessage(new ChatComponentText("Mode: 1x1"));
-            tag.setBoolean("Super", false);
-//            tag.setBoolean("isHoe", false);
         }
         if (curRad == 0) {
-            tag.setInteger("radius", 1);
             player.addChatMessage(new ChatComponentText("Mode: 3x3"));
-            tag.setBoolean("Super", false);
         }
         if (curRad == 1) {
-            tag.setInteger("radius", 2);
             player.addChatMessage(new ChatComponentText("Mode: 5x5"));
-            tag.setBoolean("Super", false);
         }
         if (curRad == 2) {
-            tag.setInteger("radius", 3);
             player.addChatMessage(new ChatComponentText("Mode: 7x7"));
-            tag.setBoolean("Super", false);
         }
         return super.onItemRightClick(stack, world, player);
     }
@@ -104,6 +98,21 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         return tag.getInteger("charge");
     }
 
+    @Override
+    public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {
+        super.onUpdate(stack, world, entity, p_77663_4_, p_77663_5_);
+        NBTTagCompound tag = getOrCreateTag(stack);
+        tag.setFloat("attackradius",1.0F);
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.RANGE)){tag.setFloat("attackradius",5.0F);}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.SILKTOUCH)){tag.setBoolean("silktouch", true);}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE)){attackDamage=21;}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH)){tag.setInteger("depth", 2);}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH1)){tag.setInteger("depth", 4);}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH2)){tag.setInteger("depth", 6);}
+    }
+
     public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
         if (ItemVajra.hasUpgrade(stack, EnumUpgradeType.HOE)) {
             player.addChatMessage(new ChatComponentText("Mode: Hoe"));
@@ -111,12 +120,6 @@ public class ItemVajra extends ItemTool implements IElectricItem {
             hoe.operationEnergyCost = effPower;
             hoe.onItemUse(stack, player, world, x, y, z, side);
         }
-        NBTTagCompound tag = getOrCreateTag(stack);
-        tag.setFloat("radiusa",1.0F);
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE)){attackDamage=21;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.RANGE)){tag.setFloat("radiusa",5.0F);}
         return false;
     }
 
@@ -344,7 +347,7 @@ public class ItemVajra extends ItemTool implements IElectricItem {
 
     public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
         NBTTagCompound tag = getOrCreateTag(stack);
-        float radiusa = tag.getFloat("radiusas");
+        float radiusa = tag.getFloat("attackradius");
         if (entity.isEntityAlive()) {
             List targets = player.worldObj.getEntitiesWithinAABBExcludingEntity(player, entity.boundingBox.expand(radiusa, radiusa, radiusa));
             int count = 0;
@@ -383,7 +386,7 @@ public class ItemVajra extends ItemTool implements IElectricItem {
 
     public boolean onItemUse(ItemStack itemstack, EntityPlayer entityplayer, World world, int i, int j, int k, int side, float a, float b, float c) {
         NBTTagCompound tag = getOrCreateTag(itemstack);
-        if (tag.getBoolean("Super")) {
+        if (tag.getBoolean("silktouch")) {
             try {
                 int metaData = world.getBlockMetadata(i, j, k);
                 Block block = world.getBlock(i, j, k);
@@ -534,10 +537,6 @@ public class ItemVajra extends ItemTool implements IElectricItem {
             return this.canHarvestBlock(block, tool) ? this.efficiencyOnProperMaterial : 1.0F;
         }
     }
-
-//    public float getStrVsBlock(ItemStack itemstack, Block par2Block) {
-//        return ElectricItem.manager.canUse(itemstack, (double)this.energyPerOperation) ? this.effPower : 0.5F;
-//    }
 
     public boolean onBlockDestroyed(ItemStack itemstack, World world, Block block, int xPos, int yPos, int zPos, EntityLivingBase entityliving) {
         if ((double)block.getBlockHardness(world, xPos, yPos, zPos) != 0.0) {

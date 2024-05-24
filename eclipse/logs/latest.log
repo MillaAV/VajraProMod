@@ -1,63 +1,42 @@
-[22:38:12] [main/INFO]: Setting user: Player843
-[22:38:14] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:38:21] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
-[22:38:23] [Sound Library Loader/INFO]: Sound engine started
-[22:38:24] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[22:38:24] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[22:38:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
-[22:38:25] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[22:38:25] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[22:38:26] [Sound Library Loader/INFO]: Sound engine started
-[22:38:56] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:38:56] [Server thread/INFO]: Generating keypair
-[22:38:56] [Server thread/INFO]: Preparing start region for level 0
-[22:38:57] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:38:57] [Server thread/INFO]: Player843[local:E:a9537c4f] logged in with entity id 101 at (-114.38188364218774, 58.0, 273.816896196336)
-[22:38:57] [Server thread/INFO]: Player843 joined the game
-[22:39:01] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:01] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:39:02] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:02] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:39:02] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:03] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:39:03] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:04] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:39:04] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:06] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:06] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:39:06] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:07] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:39:07] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:10] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:39:27] [Server thread/INFO]: [Player843: Given [Vajra] * 1 to Player843]
-[22:39:27] [Client thread/INFO]: [CHAT] Given [Vajra] * 1 to Player843
-[22:39:35] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:39] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:39] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:39:40] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:40] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:39:41] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:43] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:39:46] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:51] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:39:52] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:53] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:39:55] [Server thread/INFO]: Saving and pausing game...
-[22:39:55] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:39:55] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:39:55] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:39:58] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:39:59] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:39:59] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:39:59] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:39:59] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:40:00] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:40:01] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:40:01] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:40:05] [Client thread/INFO]: Stopping!
-[22:40:05] [Server thread/INFO]: Stopping server
-[22:40:05] [Server thread/INFO]: Saving players
-[22:40:05] [Server thread/INFO]: Saving worlds
-[22:40:05] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:40:05] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:40:05] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[22:35:12] [main/INFO]: Setting user: Player15
+[22:35:14] [Client thread/INFO]: LWJGL Version: 2.9.1
+[22:35:21] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
+[22:35:23] [Sound Library Loader/INFO]: Sound engine started
+[22:35:24] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[22:35:24] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[22:35:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
+[22:35:25] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[22:35:25] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[22:35:26] [Sound Library Loader/INFO]: Sound engine started
+[22:37:29] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[22:37:29] [Server thread/INFO]: Generating keypair
+[22:37:29] [Server thread/INFO]: Preparing start region for level 0
+[22:37:30] [Server thread/INFO]: Changing view distance to 12, from 10
+[22:37:30] [Server thread/INFO]: Player15[local:E:bcebca65] logged in with entity id 274 at (-82.27284881082119, 20.0, 262.2153665662124)
+[22:37:30] [Server thread/INFO]: Player15 joined the game
+[22:37:34] [Client thread/INFO]: [CHAT] Mode: 1x1
+[22:37:35] [Server thread/INFO]: Player15 has just earned the achievement [Taking Inventory]
+[22:37:35] [Client thread/INFO]: [CHAT] Player15 has just earned the achievement [Taking Inventory]
+[22:37:36] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:38] [Client thread/INFO]: [CHAT] Mode: 5x5
+[22:37:39] [Client thread/INFO]: [CHAT] Mode: 7x7
+[22:37:39] [Client thread/INFO]: [CHAT] Mode: 1x1
+[22:37:40] [Client thread/INFO]: [CHAT] Mode: 7x7
+[22:37:42] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:44] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:44] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:44] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:45] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:45] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:45] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:37:45] [Server thread/INFO]: Saving and pausing game...
+[22:37:45] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[22:37:45] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[22:37:45] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[22:37:47] [Client thread/INFO]: Stopping!
+[22:37:47] [Server thread/INFO]: Stopping server
+[22:37:47] [Server thread/INFO]: Saving players
+[22:37:47] [Server thread/INFO]: Saving worlds
+[22:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[22:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[22:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/The End

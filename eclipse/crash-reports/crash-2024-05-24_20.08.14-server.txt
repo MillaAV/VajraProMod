@@ -1,0 +1,87 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 24.05.24 20:08
+Description: Ticking block entity
+
+java.lang.NullPointerException: Ticking block entity
+	at millaav.vajrapro.common.tile.TileToolStation.canUpgrade(TileToolStation.java:42)
+	at millaav.vajrapro.common.tile.TileToolStation.updateEntity(TileToolStation.java:65)
+	at net.minecraft.world.World.updateEntities(World.java:2160)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at millaav.vajrapro.common.tile.TileToolStation.canUpgrade(TileToolStation.java:42)
+	at millaav.vajrapro.common.tile.TileToolStation.updateEntity(TileToolStation.java:65)
+
+-- Block entity being ticked --
+Details:
+	Name: tiletoolstation // millaav.vajrapro.common.tile.TileToolStation
+	Block type: ID #229 (tile.toolStantion // millaav.vajrapro.common.block.BlockToolStation)
+	Block data value: 0 / 0x0 / 0b0000
+	Block location: World: (-124,73,286), Chunk: (at 4,4,14 in -8,17; contains blocks -128,0,272 to -113,255,287), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Actual block type: ID #229 (tile.toolStantion // millaav.vajrapro.common.block.BlockToolStation)
+	Actual block data value: 0 / 0x0 / 0b0000
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2160)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 625 Drop: 0
+	Level seed: 9100538424301239251
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (-99,64,268), Chunk: (at 13,4,12 in -7,16; contains blocks -112,0,256 to -97,255,271), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 1657818 game time, 1667366 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 24788 (now: false), thunder time: 46072 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_412, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 739009448 bytes (704 MB) / 1324875776 bytes (1263 MB) up to 3787980800 bytes (3612 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal-deobf.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.48} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	IC2{2.2.827-experimental} [IndustrialCraft 2] (industrialcraft-2-deobf.jar) 
+	UCHIJAAAA	LuckyRecipeMaker{1.0} [LuckyRecipeMaker] (LuckyRecipeMaker-1.0-deobf.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (minetweaker3-1.7.10-3.0.10b-deobf.jar) 
+	UCHIJAAAA	GraviSuite{1.7.10-2.0.3} [Graviation Suite] (gravisuite-1.7.10-2.0.3-deobf.jar) 
+	UCHIJAAAA	vajrapro{1.0.0} [VajraPro] (MillaAVMod-1.0.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

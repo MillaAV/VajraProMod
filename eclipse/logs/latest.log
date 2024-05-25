@@ -1,42 +1,34 @@
-[22:35:12] [main/INFO]: Setting user: Player15
-[22:35:14] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:35:21] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
-[22:35:23] [Sound Library Loader/INFO]: Sound engine started
-[22:35:24] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[22:35:24] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[22:35:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
-[22:35:25] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[22:35:25] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[22:35:26] [Sound Library Loader/INFO]: Sound engine started
-[22:37:29] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:37:29] [Server thread/INFO]: Generating keypair
-[22:37:29] [Server thread/INFO]: Preparing start region for level 0
-[22:37:30] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:37:30] [Server thread/INFO]: Player15[local:E:bcebca65] logged in with entity id 274 at (-82.27284881082119, 20.0, 262.2153665662124)
-[22:37:30] [Server thread/INFO]: Player15 joined the game
-[22:37:34] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:37:35] [Server thread/INFO]: Player15 has just earned the achievement [Taking Inventory]
-[22:37:35] [Client thread/INFO]: [CHAT] Player15 has just earned the achievement [Taking Inventory]
-[22:37:36] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:38] [Client thread/INFO]: [CHAT] Mode: 5x5
-[22:37:39] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:37:39] [Client thread/INFO]: [CHAT] Mode: 1x1
-[22:37:40] [Client thread/INFO]: [CHAT] Mode: 7x7
-[22:37:42] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:44] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:44] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:44] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:45] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:45] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:45] [Client thread/INFO]: [CHAT] Mode: 3x3
-[22:37:45] [Server thread/INFO]: Saving and pausing game...
-[22:37:45] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:37:45] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:37:45] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:37:47] [Client thread/INFO]: Stopping!
-[22:37:47] [Server thread/INFO]: Stopping server
-[22:37:47] [Server thread/INFO]: Saving players
-[22:37:47] [Server thread/INFO]: Saving worlds
-[22:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:37:47] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[22:26:19] [main/INFO]: Setting user: Player406
+[22:26:21] [Client thread/INFO]: LWJGL Version: 2.9.1
+[22:26:28] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
+[22:26:31] [Sound Library Loader/INFO]: Sound engine started
+[22:26:31] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[22:26:31] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[22:26:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
+[22:26:33] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[22:26:33] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[22:26:34] [Sound Library Loader/INFO]: Sound engine started
+[22:26:36] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[22:26:36] [Server thread/INFO]: Generating keypair
+[22:26:37] [Server thread/INFO]: Preparing start region for level 0
+[22:26:38] [Server thread/INFO]: Changing view distance to 12, from 10
+[22:26:38] [Server thread/INFO]: Player406[local:E:f9f16bab] logged in with entity id 460 at (-123.54292944926647, 73.49878323956318, 287.8947766400193)
+[22:26:38] [Server thread/INFO]: Player406 joined the game
+[22:27:04] [Client thread/INFO]: [CHAT] Mode: 1x1
+[22:27:06] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:27:19] [Client thread/INFO]: [CHAT] Mode: 5x5
+[22:27:22] [Client thread/INFO]: [CHAT] Mode: 7x7
+[22:27:44] [Client thread/INFO]: [CHAT] Mode: 1x1
+[22:27:44] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:27:44] [Client thread/INFO]: [CHAT] Mode: 5x5
+[22:27:45] [Client thread/INFO]: [CHAT] Mode: 7x7
+[22:27:54] [Client thread/INFO]: [CHAT] Mode: 1x1
+[22:27:55] [Client thread/INFO]: [CHAT] Mode: 3x3
+[22:27:55] [Client thread/INFO]: [CHAT] Mode: 5x5
+[22:28:02] [Client thread/INFO]: Stopping!
+[22:28:03] [Server thread/INFO]: Stopping server
+[22:28:03] [Server thread/INFO]: Saving players
+[22:28:03] [Server thread/INFO]: Saving worlds
+[22:28:03] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[22:28:03] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[22:28:03] [Server thread/INFO]: Saving chunks for level 'New World'/The End

@@ -35,12 +35,13 @@ public class TileToolStation extends TileEntity {
         tag.setInteger("upgradingProgress", upgradingProgress);
     }
 
+
     public boolean canUpgrade() {
         ItemStack vajra = inv.getStackInSlot(0);
         ItemStack upgrade = inv.getStackInSlot(1);
         if (vajra == null || !(vajra.getItem() instanceof ItemVajra)) return false;
-        if (upgrade == null || upgrade.getItem() != Items.diamond) return false;
-        if (vajra.getItem() instanceof ItemVajraC || vajra.getItem() instanceof ItemVajraP) return true;
+        if (upgrade == null) return false;
+        if ((vajra.getItem() instanceof ItemVajraC && upgrade.getItem() == ItemRegistry.tier1upgrade) || (vajra.getItem() instanceof ItemVajraP && upgrade.getItem() == ItemRegistry.tier2upgrade)) return true;
         return false;
     }
 

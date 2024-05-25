@@ -1,0 +1,135 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 25.05.24 10:13
+Description: Updating screen events
+
+java.lang.ArrayIndexOutOfBoundsException: 8
+	at net.minecraft.inventory.InventoryBasic.setInventorySlotContents(InventoryBasic.java:107)
+	at millaav.vajrapro.common.container.ContainerToolStation.setSlots(ContainerToolStation.java:84)
+	at millaav.vajrapro.common.container.ContainerToolStation$1.onSlotChanged(ContainerToolStation.java:42)
+	at net.minecraft.inventory.Slot.putStack(Slot.java:105)
+	at net.minecraft.inventory.Container.slotClick(Container.java:325)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:478)
+	at codechicken.nei.guihook.GuiContainerManager.handleSlotClick(GuiContainerManager.java:504)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:673)
+	at net.minecraft.client.gui.inventory.GuiContainer.public_func_146984_a(GuiContainer.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.callHandleMouseClick(DefaultSlotClickHandler.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.handleSlotClick(DefaultSlotClickHandler.java:17)
+	at codechicken.nei.guihook.GuiContainerManager.handleMouseClick(GuiContainerManager.java:453)
+	at net.minecraft.client.gui.inventory.GuiContainer.managerHandleMouseClick(GuiContainer.java)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseMovedOrUp(GuiContainer.java:639)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:354)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseInput(GuiContainer.java)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1731)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.inventory.InventoryBasic.setInventorySlotContents(InventoryBasic.java:107)
+	at millaav.vajrapro.common.container.ContainerToolStation.setSlots(ContainerToolStation.java:84)
+	at millaav.vajrapro.common.container.ContainerToolStation$1.onSlotChanged(ContainerToolStation.java:42)
+	at net.minecraft.inventory.Slot.putStack(Slot.java:105)
+	at net.minecraft.inventory.Container.slotClick(Container.java:325)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:478)
+	at codechicken.nei.guihook.GuiContainerManager.handleSlotClick(GuiContainerManager.java:504)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:673)
+	at net.minecraft.client.gui.inventory.GuiContainer.public_func_146984_a(GuiContainer.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.callHandleMouseClick(DefaultSlotClickHandler.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.handleSlotClick(DefaultSlotClickHandler.java:17)
+	at codechicken.nei.guihook.GuiContainerManager.handleMouseClick(GuiContainerManager.java:453)
+	at net.minecraft.client.gui.inventory.GuiContainer.managerHandleMouseClick(GuiContainer.java)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseMovedOrUp(GuiContainer.java:639)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:354)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseInput(GuiContainer.java)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+
+-- Affected screen --
+Details:
+	Screen name: millaav.vajrapro.client.gui.GuiToolStation
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player375'/557, l='MpServer', x=-122,70, y=74,62, z=286,38]]
+	Chunk stats: MultiplayerChunkCache: 625, 625
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-99,64,268), Chunk: (at 13,4,12 in -7,16; contains blocks -112,0,256 to -97,255,271), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 1703127 game time, 1736456 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 100 total; [EntitySquid['Squid'/348933, l='MpServer', x=-63,81, y=49,88, z=318,84], EntitySquid['Squid'/348935, l='MpServer', x=-59,66, y=51,38, z=318,50], EntitySquid['Squid'/348929, l='MpServer', x=-57,81, y=47,09, z=324,81], EntitySquid['Squid'/348684, l='MpServer', x=-182,47, y=62,29, z=346,91], EntitySquid['Squid'/348687, l='MpServer', x=-181,06, y=62,13, z=351,69], EntitySquid['Squid'/348681, l='MpServer', x=-177,91, y=59,00, z=346,41], EntitySquid['Squid'/348680, l='MpServer', x=-176,72, y=61,34, z=343,06], EntityBat['Bat'/155663, l='MpServer', x=-111,20, y=21,38, z=209,30], EntityBat['Bat'/142349, l='MpServer', x=-125,25, y=56,10, z=274,56], EntitySquid['Squid'/348447, l='MpServer', x=-62,88, y=59,66, z=223,84], EntitySquid['Squid'/348186, l='MpServer', x=-63,13, y=59,38, z=237,22], EntityBat['Bat'/347943, l='MpServer', x=-159,64, y=22,01, z=274,55], EntityBat['Bat'/347942, l='MpServer', x=-160,72, y=24,10, z=276,88], EntityBat['Bat'/347939, l='MpServer', x=-166,50, y=23,08, z=264,24], EntityBat['Bat'/347938, l='MpServer', x=-131,32, y=21,99, z=295,92], EntityClientPlayerMP['Player375'/557, l='MpServer', x=-122,70, y=74,62, z=286,38], EntitySquid['Squid'/348469, l='MpServer', x=-106,25, y=47,28, z=331,50], EntitySquid['Squid'/348727, l='MpServer', x=-187,16, y=45,26, z=313,56], EntitySquid['Squid'/348726, l='MpServer', x=-180,16, y=47,01, z=314,81], EntityBat['Bat'/312, l='MpServer', x=-131,53, y=47,10, z=284,25], EntityBat['Bat'/304444, l='MpServer', x=-116,84, y=38,72, z=262,76], EntitySquid['Squid'/348477, l='MpServer', x=-106,34, y=49,34, z=324,41], EntitySquid['Squid'/348220, l='MpServer', x=-154,16, y=47,79, z=277,38], EntitySquid['Squid'/348988, l='MpServer', x=-87,06, y=46,38, z=243,03], EntitySquid['Squid'/348217, l='MpServer', x=-157,47, y=47,38, z=278,50], EntitySquid['Squid'/348473, l='MpServer', x=-112,47, y=49,26, z=323,13], EntitySquid['Squid'/348985, l='MpServer', x=-89,13, y=46,22, z=245,88], EntitySquid['Squid'/348472, l='MpServer', x=-111,66, y=47,09, z=323,53], EntitySquid['Squid'/348731, l='MpServer', x=-187,50, y=45,03, z=312,31], EntitySquid['Squid'/348218, l='MpServer', x=-154,03, y=48,35, z=280,16], EntitySquid['Squid'/348986, l='MpServer', x=-93,69, y=42,00, z=237,81], EntitySquid['Squid'/348225, l='MpServer', x=-155,22, y=48,07, z=278,94], EntitySquid['Squid'/348224, l='MpServer', x=-151,66, y=47,76, z=274,59], EntitySquid['Squid'/348226, l='MpServer', x=-156,63, y=44,13, z=273,31], EntitySquid['Squid'/348749, l='MpServer', x=-178,88, y=47,38, z=313,28], EntityItem['item.item.dyePowder.black'/58441, l='MpServer', x=-105,00, y=39,13, z=249,34], EntitySquid['Squid'/348503, l='MpServer', x=-81,50, y=54,22, z=336,03], EntitySquid['Squid'/348759, l='MpServer', x=-181,13, y=46,81, z=327,66], EntitySquid['Squid'/348511, l='MpServer', x=-72,19, y=55,38, z=335,66], EntitySquid['Squid'/348510, l='MpServer', x=-64,94, y=55,34, z=320,81], EntitySquid['Squid'/348507, l='MpServer', x=-80,31, y=55,01, z=325,50], EntitySquid['Squid'/348506, l='MpServer', x=-92,28, y=55,34, z=330,16], EntitySquid['Squid'/348512, l='MpServer', x=-73,94, y=54,16, z=319,81], EntitySquid['Squid'/348514, l='MpServer', x=-78,72, y=54,34, z=324,31], EntitySquid['Squid'/349037, l='MpServer', x=-166,94, y=59,38, z=271,16], EntitySquid['Squid'/348012, l='MpServer', x=-179,78, y=53,31, z=227,53], EntitySquid['Squid'/348014, l='MpServer', x=-177,63, y=53,72, z=230,31], EntitySquid['Squid'/349038, l='MpServer', x=-170,38, y=59,35, z=269,19], EntitySquid['Squid'/348008, l='MpServer', x=-183,09, y=52,88, z=239,50], EntitySquid['Squid'/349045, l='MpServer', x=-156,50, y=56,81, z=268,50], EntitySquid['Squid'/349047, l='MpServer', x=-158,13, y=57,34, z=258,91], EntitySquid['Squid'/348016, l='MpServer', x=-188,13, y=56,34, z=234,16], EntitySquid['Squid'/349040, l='MpServer', x=-169,97, y=56,78, z=272,66], EntitySquid['Squid'/348031, l='MpServer', x=-182,19, y=44,97, z=245,50], EntitySquid['Squid'/348039, l='MpServer', x=-184,56, y=46,38, z=242,47], EntitySquid['Squid'/348033, l='MpServer', x=-186,88, y=44,38, z=250,22], EntitySquid['Squid'/348032, l='MpServer', x=-185,28, y=46,34, z=250,34], EntitySquid['Squid'/348044, l='MpServer', x=-87,28, y=49,25, z=286,75], EntitySquid['Squid'/348043, l='MpServer', x=-92,72, y=49,00, z=281,03], EntitySquid['Squid'/349079, l='MpServer', x=-111,34, y=61,06, z=225,72], EntitySquid['Squid'/349073, l='MpServer', x=-108,09, y=60,78, z=227,69], EntitySquid['Squid'/349075, l='MpServer', x=-116,19, y=61,28, z=228,22], EntitySquid['Squid'/349080, l='MpServer', x=-110,53, y=59,75, z=229,13], EntityBat['Bat'/349336, l='MpServer', x=-140,75, y=35,68, z=265,75], EntitySquid['Squid'/349093, l='MpServer', x=-63,78, y=59,10, z=246,53], EntitySquid['Squid'/349100, l='MpServer', x=-58,31, y=57,75, z=251,84], EntityBat['Bat'/349353, l='MpServer', x=-112,25, y=34,58, z=214,67], EntityPig['Pig'/194, l='MpServer', x=-168,56, y=62,35, z=222,63], EntityBat['Bat'/349383, l='MpServer', x=-129,41, y=32,26, z=292,25], EntityCow['Cow'/195, l='MpServer', x=-164,38, y=64,00, z=220,59], EntityBat['Bat'/349382, l='MpServer', x=-125,66, y=33,60, z=287,59], EntityPig['Pig'/196, l='MpServer', x=-157,13, y=64,00, z=225,28], EntityBat['Bat'/349377, l='MpServer', x=-140,50, y=32,89, z=292,31], EntityCow['Cow'/197, l='MpServer', x=-170,69, y=63,00, z=227,53], EntityBat['Bat'/349376, l='MpServer', x=-131,25, y=35,64, z=287,47], EntityChicken['Chicken'/198, l='MpServer', x=-166,63, y=64,00, z=236,38], EntityPig['Pig'/199, l='MpServer', x=-160,91, y=64,00, z=225,44], EntityBat['Bat'/349378, l='MpServer', x=-125,28, y=36,29, z=274,50], EntityChicken['Chicken'/200, l='MpServer', x=-159,47, y=66,00, z=244,56], EntityBat['Bat'/349389, l='MpServer', x=-129,47, y=34,10, z=286,25], EntityBat['Bat'/349391, l='MpServer', x=-124,53, y=32,26, z=288,47], EntityBat['Bat'/349390, l='MpServer', x=-139,50, y=34,08, z=274,91], EntitySquid['Squid'/348885, l='MpServer', x=-184,50, y=55,34, z=331,72], EntitySquid['Squid'/348887, l='MpServer', x=-185,63, y=55,25, z=335,72], EntityBat['Bat'/349392, l='MpServer', x=-129,38, y=34,10, z=287,66], EntitySquid['Squid'/348127, l='MpServer', x=-185,94, y=57,00, z=303,97], EntitySquid['Squid'/348132, l='MpServer', x=-180,50, y=57,34, z=290,34], EntitySquid['Squid'/348131, l='MpServer', x=-187,34, y=56,38, z=298,06], EntitySquid['Squid'/348130, l='MpServer', x=-185,25, y=55,25, z=295,09], EntitySquid['Squid'/348911, l='MpServer', x=-65,75, y=47,32, z=233,88], EntitySquid['Squid'/348907, l='MpServer', x=-182,69, y=56,13, z=334,44], EntitySquid['Squid'/348917, l='MpServer', x=-71,72, y=47,25, z=228,56], EntitySquid['Squid'/348916, l='MpServer', x=-74,84, y=46,29, z=240,47], EntitySquid['Squid'/348913, l='MpServer', x=-66,19, y=44,94, z=240,34], EntitySquid['Squid'/348912, l='MpServer', x=-74,72, y=44,16, z=239,53], EntitySquid['Squid'/348914, l='MpServer', x=-68,66, y=47,32, z=242,44], EntitySquid['Squid'/348924, l='MpServer', x=-66,81, y=49,31, z=319,56], EntityChicken['Chicken'/250, l='MpServer', x=-156,47, y=64,00, z=237,34], EntitySquid['Squid'/348927, l='MpServer', x=-61,28, y=51,34, z=317,84], EntitySquid['Squid'/348926, l='MpServer', x=-63,09, y=50,22, z=320,41]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_412, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 844922608 bytes (805 MB) / 1351090176 bytes (1288 MB) up to 3787980800 bytes (3612 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal-deobf.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.7.48} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	IC2{2.2.827-experimental} [IndustrialCraft 2] (industrialcraft-2-deobf.jar) 
+	UCHIJAAAA	LuckyRecipeMaker{1.0} [LuckyRecipeMaker] (LuckyRecipeMaker-1.0-deobf.jar) 
+	UCHIJAAAA	MineTweaker3{3.0.10} [MineTweaker 3] (minetweaker3-1.7.10-3.0.10b-deobf.jar) 
+	UCHIJAAAA	GraviSuite{1.7.10-2.0.3} [Graviation Suite] (gravisuite-1.7.10-2.0.3-deobf.jar) 
+	UCHIJAAAA	vajrapro{1.0.0} [VajraPro] (MillaAVMod-1.0.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 552.44' Renderer: 'NVIDIA GeForce RTX 3050/PCIe/SSE2'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: NVIDIA GeForce RTX 3050/PCIe/SSE2 GL version 4.6.0 NVIDIA 552.44, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

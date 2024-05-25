@@ -45,7 +45,7 @@ public class ContainerToolStation extends Container {
         upgradeSlot = this.addSlotToContainer(new Slot(tile.inv, 1, 80, 71){
             @Override
             public boolean isItemValid(ItemStack p_75214_1_) {
-                return p_75214_1_==null || p_75214_1_.getItem() == Items.diamond;
+                return p_75214_1_==null || p_75214_1_.getItem() == ItemRegistry.tier1upgrade || p_75214_1_.getItem() == ItemRegistry.tier2upgrade;
             }
         });
 

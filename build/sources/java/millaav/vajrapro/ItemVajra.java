@@ -37,6 +37,7 @@ public class ItemVajra extends ItemTool implements IElectricItem {
     public int maxCharge, transferLimit, tier, epo;
     public float effPower;
     int attackDamage = 3;
+    public int st = 0;
 
     public ItemVajra(float p_i45333_1_, ToolMaterial p_i45333_2_, Set p_i45333_3_) {
         super(p_i45333_1_, p_i45333_2_, p_i45333_3_);
@@ -57,24 +58,12 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         }else if(getVajraTier()==3) {
             limit = 4;
         }
-
-        tag.setInteger("radius",(curRad+1)%limit);
+        curRad = (curRad+1)%limit;
+        tag.setInteger("radius",curRad);
         tag.setInteger("charge", getCutEnergy(stack));
-        tag.setInteger("depth", 0);
 
-
-        if (curRad == 3) {
-            player.addChatMessage(new ChatComponentText("Mode: 1x1"));
-        }
-        if (curRad == 0) {
-            player.addChatMessage(new ChatComponentText("Mode: 3x3"));
-        }
-        if (curRad == 1) {
-            player.addChatMessage(new ChatComponentText("Mode: 5x5"));
-        }
-        if (curRad == 2) {
-            player.addChatMessage(new ChatComponentText("Mode: 7x7"));
-        }
+        int d = 1+curRad*2;
+        player.addChatMessage(new ChatComponentText(String.format("Mode: %dx%d",d,d)));
         return super.onItemRightClick(stack, world, player);
     }
 
@@ -109,7 +98,7 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH)){tag.setInteger("depth", 2);}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH1)){tag.setInteger("depth", 4);}
+        if(st == 1 && ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH1)){tag.setInteger("depth", 4);}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH2)){tag.setInteger("depth", 6);}
     }
 

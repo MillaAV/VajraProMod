@@ -5,14 +5,14 @@ import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.item.ItemStack;
 
-public class PacketGiveItem implements IMessage {
+public class PacketAutosmeltChange implements IMessage {
     public ItemStack stack;
     public int count;
 
-    public PacketGiveItem() {
+    public PacketAutosmeltChange() {
     }
 
-    public PacketGiveItem(ItemStack stack, int count) {
+    public PacketAutosmeltChange(ItemStack stack, int count) {
         this.stack=stack;
         this.count=count;
     }

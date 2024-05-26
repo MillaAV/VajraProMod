@@ -10,6 +10,7 @@ import cpw.mods.fml.relauncher.Side;
 import millaav.vajrapro.VajraPro;
 import millaav.vajrapro.client.gui.GuiHandler;
 import millaav.vajrapro.common.handler.EventHandler;
+import millaav.vajrapro.common.handler.NetworkHandler;
 import millaav.vajrapro.common.registry.BlockRegistry;
 import millaav.vajrapro.common.registry.ItemRegistry;
 import millaav.vajrapro.common.registry.RecipeRegistry;
@@ -31,6 +32,7 @@ public class CommonProxy {
         NetworkRegistry.INSTANCE.registerGuiHandler(VajraPro.instance, new GuiHandler());
         GameRegistry.registerTileEntity(TileToolStation.class, "tiletoolstation");
         RecipeRegistry.init();
+        NetworkHandler.init();
     }
 
     public void postInit(FMLPostInitializationEvent event){

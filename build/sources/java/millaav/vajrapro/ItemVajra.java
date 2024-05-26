@@ -98,7 +98,7 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH)){tag.setInteger("depth", 2);}
-        if(st == 1 && ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH1)){tag.setInteger("depth", 4);}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH1)){tag.setInteger("depth", 4);}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH2)){tag.setInteger("depth", 6);}
     }
 

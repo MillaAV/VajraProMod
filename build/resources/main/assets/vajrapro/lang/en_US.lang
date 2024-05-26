@@ -50,3 +50,6 @@ message.text.disabled=disabled
 message.vajra.silkTouchMode=Silk touch mode
 message.vajra.silkTouchDisabled=Can't change tool mode ! Accurate mode disabled in config  file !
 
+key.vajrapro.category=VajraPro
+key.changedepths=Сhange depths
+

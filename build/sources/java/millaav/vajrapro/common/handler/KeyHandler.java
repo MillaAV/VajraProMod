@@ -10,7 +10,6 @@ import org.lwjgl.input.Keyboard;
 public class KeyHandler{
 
     public static final KeyBinding changedepths = new KeyBinding("key.changedepths", Keyboard.KEY_I, "key.vajrapro.category");
-    public static final KeyBinding changedepths1 = new KeyBinding("key.changedepths", Keyboard.KEY_O, "key.vajrapro.category");
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public void onEvent(InputEvent.KeyInputEvent event){

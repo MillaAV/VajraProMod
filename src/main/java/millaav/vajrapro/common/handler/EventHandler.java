@@ -22,8 +22,14 @@ public class EventHandler {
         for (ItemStack stack : event.drops) {
             ItemStack smeltingRes = FurnaceRecipes.smelting().getSmeltingResult(stack);
 
-            if (smeltingRes != null) {
-                newDrops.add(smeltingRes.copy());
+            if (smeltingRes != null){
+                int fortuneLevel = 0;
+                if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.FORTUNA)){fortuneLevel=3;}
+                if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.FORTUNA1)){fortuneLevel=5;}
+                if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.FORTUNA2)){fortuneLevel=10;}
+                ItemStack smeltingResCopied = smeltingRes.copy();
+                smeltingResCopied.stackSize = event.harvester.worldObj.rand.nextInt(fortuneLevel+1);
+                newDrops.add(smeltingResCopied);
             } else {
                 newDrops.add(stack);
             }

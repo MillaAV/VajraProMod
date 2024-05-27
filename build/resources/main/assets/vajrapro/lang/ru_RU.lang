@@ -36,14 +36,21 @@ tile.toolStantion.name=Модульная станция
 
 block.guitoolstation.name=Модульная станция
 block.guitoolstation.skto=Модуль "Шелковое касание" не совместим
-block.guitoolstation.with=с моделями "Удача" и "Авто-переплавка"
+block.guitoolstation.with=с модулем "Мотыга"
 
 
-item.test.r=AOE Digging:
-item.test.hoe=Мотыга:
-item.test.hoe1=Включено
-item.test.hoe2=Выключено
-message.text.enabled=включено
-message.text.disabled=выключено
-message.vajra.silkTouchMode=Шелковое касание вкл.
-message.vajra.silkTouchDisabled=Не удается изменить режим работы инструмента!
+message.text.enabled=enabled
+message.text.disabled=disabled
+
+key.vajrapro.category=VajraPro
+key.changedepths=Режим глубины
+
+info.radius=Радиус:
+info.depth=Глубина:
+info.hoe=Миотыга:
+info.enabled=Включено
+info.disabled=Выключено
+info.silktouch=Шелковое касание:
+info.automelting=Авто-переплавка:
+info.hoeandsilktouch=Модуль «Мотыга» не совместим с модулем «Шелковое касание».
+info.hoeandsilktouch1=Модули «Шелковое касание» и «Мотыга»

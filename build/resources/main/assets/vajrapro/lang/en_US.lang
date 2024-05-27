@@ -38,18 +38,22 @@ tile.toolStantion.name=Module Stantion
 
 block.guitoolstation.name=Tool Station
 block.guitoolstation.skto="Silk Touch" module can not be combined
-block.guitoolstation.with=with "Fortune" and "Auto-melting" modules
+block.guitoolstation.with=with "Hoe" modules
 
 
-item.test.r=AOE Digging:
-item.test.hoe=Hoe:
-item.test.hoe1=Enabled
-item.test.hoe2=Disabled
 message.text.enabled=enabled
 message.text.disabled=disabled
-message.vajra.silkTouchMode=Silk touch mode
-message.vajra.silkTouchDisabled=Can't change tool mode ! Accurate mode disabled in config  file !
 
 key.vajrapro.category=VajraPro
 key.changedepths=Сhange depths
+
+info.radius=Radius:
+info.depth=Depth:
+info.hoe=Hoe:
+info.enabled=Enabled
+info.disabled=Disabled
+info.silktouch=Silk Touch:
+info.automelting=Auto-Melting:
+info.hoeandsilktouch=The «Hoe» module is incompatible with the «Silk Touch» module.
+info.hoeandsilktouch1=The «Hoe» module and «Silk Touch» is
 

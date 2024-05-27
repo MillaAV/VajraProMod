@@ -1,5 +1,7 @@
 package millaav.vajrapro;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import ic2.api.item.ElectricItem;
@@ -14,6 +16,8 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
@@ -73,17 +77,25 @@ public class ItemVajra extends ItemTool implements IElectricItem {
             Map<Integer, Integer> enchantmentMap = new HashMap();
             enchantmentMap.put(Enchantment.fortune.effectId, 3);
             EnchantmentHelper.setEnchantments(enchantmentMap, stack);
+        } else {
+            Map<Integer, Integer> enchantmentMap = new HashMap();
+            enchantmentMap.put(Enchantment.fortune.effectId, 0);
+            EnchantmentHelper.setEnchantments(enchantmentMap, stack);
         }
         if(ItemVajra.hasUpgrade(stack, EnumUpgradeType.FORTUNA1)){
             Map<Integer, Integer> enchantmentMap = new HashMap();
             enchantmentMap.put(Enchantment.fortune.effectId, 5);
             EnchantmentHelper.setEnchantments(enchantmentMap, stack);
-        }
+        } else {Map<Integer, Integer> enchantmentMap = new HashMap();
+            enchantmentMap.put(Enchantment.fortune.effectId, 0);
+            EnchantmentHelper.setEnchantments(enchantmentMap, stack);}
         if(ItemVajra.hasUpgrade(stack, EnumUpgradeType.FORTUNA2)) {
             Map<Integer, Integer> enchantmentMap = new HashMap();
             enchantmentMap.put(Enchantment.fortune.effectId, 10);
             EnchantmentHelper.setEnchantments(enchantmentMap, stack);
-        }
+        } else {Map<Integer, Integer> enchantmentMap = new HashMap();
+            enchantmentMap.put(Enchantment.fortune.effectId, 0);
+            EnchantmentHelper.setEnchantments(enchantmentMap, stack);}
         return tag.getInteger("charge");
     }
 
@@ -92,22 +104,29 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         super.onUpdate(stack, world, entity, p_77663_4_, p_77663_5_);
         NBTTagCompound tag = getOrCreateTag(stack);
         tag.setFloat("attackradius",1.0F);
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.RANGE)){tag.setFloat("attackradius",5.0F);}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.RANGE)){tag.setFloat("attackradius",5.0F);}else {tag.setFloat("attackradius",1.0F);}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.SILKTOUCH)){tag.setBoolean("silktouch", true);}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE)){attackDamage=21;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}
-        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE)){attackDamage=21;}else attackDamage = 3;
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE1)){attackDamage=61;}else attackDamage = 3;
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DAMAGE2)){attackDamage=121;}else attackDamage = 3;
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH)){tag.setInteger("depth", 2);}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH1)){tag.setInteger("depth", 4);}
         if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH2)){tag.setInteger("depth", 6);}
     }
 
     public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
-        if (ItemVajra.hasUpgrade(stack, EnumUpgradeType.HOE)) {
-            player.addChatMessage(new ChatComponentText("Mode: Hoe"));
+        if (ItemVajra.hasUpgrade(stack, EnumUpgradeType.HOE) && !ItemVajra.hasUpgrade(stack,EnumUpgradeType.SILKTOUCH)) {
+            NBTTagCompound tag = getOrCreateTag(stack);
+            tag.setBoolean("isHoe", true);
             Hoe hoe = new Hoe();
             hoe.operationEnergyCost = effPower;
             hoe.onItemUse(stack, player, world, x, y, z, side);
+        }
+        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.SILKTOUCH) && ItemVajra.hasUpgrade(stack, EnumUpgradeType.HOE)){
+            NBTTagCompound tag = getOrCreateTag(stack);
+            tag.setBoolean("silktouch", false);
+            player.addChatMessage(new ChatComponentText(StatCollector.translateToLocal("info.hoeandsilktouch")));
+            player.addChatMessage(new ChatComponentText(StatCollector.translateToLocal("info.hoeandsilktouch1") + EnumChatFormatting.RED + " " + StatCollector.translateToLocal("info.disabled")));
         }
         return false;
     }
@@ -131,11 +150,11 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         return stack.stackTagCompound;
     }
 
-//    public Multimap getAttributeModifiers(ItemStack stack) {
-//        Multimap<String, AttributeModifier> ret = HashMultimap.create();
-//        ret.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Tool modifier", attackDamage, 0));
-//        return ret;
-//    }
+    public Multimap getAttributeModifiers(ItemStack stack) {
+        Multimap<String, AttributeModifier> ret = HashMultimap.create();
+        ret.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Tool modifier", attackDamage, 0));
+        return ret;
+    }
 
 
     public Map<Block, Integer> getObliterationList(ItemStack stack) {
@@ -353,10 +372,6 @@ public class ItemVajra extends ItemTool implements IElectricItem {
                     ent.attackEntityFrom(DamageSource.causePlayerDamage(player), attackDamage);
                     ++count;
                 }
-
-//                if (count > 0 && !player.worldObj.isRemote) {
-//                    player.worldObj.playSoundAtEntity(entity, "thaumcraft:swing", 1.0F, 0.9F + player.worldObj.rand.nextFloat() * 0.2F);
-//                }
             }
         }
 
@@ -542,12 +557,27 @@ public class ItemVajra extends ItemTool implements IElectricItem {
     public void addInformation(ItemStack itemStack, EntityPlayer player, List info, boolean b) {
         super.addInformation(itemStack, player, info, b);
         NBTTagCompound tag = getOrCreateTag(itemStack);
-        info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("item.test.r") + " " + EnumChatFormatting.GREEN + (1 + (tag.getInteger("radius") * 2)) +
+        info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.radius") + " " + EnumChatFormatting.WHITE + (1 + (tag.getInteger("radius") * 2)) +
                 "x" + (1 + (tag.getInteger("radius") * 2)));
-        if (tag.getBoolean("isHoe")) {
-            info.add(EnumChatFormatting.LIGHT_PURPLE + StatCollector.translateToLocal("item.test.hoe") + " " + EnumChatFormatting.GREEN + StatCollector.translateToLocal("item.test.hoe1"));
-        } else
-            info.add(EnumChatFormatting.LIGHT_PURPLE + StatCollector.translateToLocal("item.test.hoe") + " " + EnumChatFormatting.RED + StatCollector.translateToLocal("item.test.hoe2"));
+        if((ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.DEPTH)) || (ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.DEPTH1)) || (ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.DEPTH2))){
+            info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.depth") + " " + EnumChatFormatting.WHITE + (1 + (tag.getInteger("depth"))));
+        }
+        if(ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.SILKTOUCH)){
+            info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.silktouch") + " " + EnumChatFormatting.GREEN + StatCollector.translateToLocal("info.silktouchon"));
+        }
+        if((ItemVajra.hasUpgrade(itemStack, EnumUpgradeType.AUTOMELTING))){
+            tag.setBoolean("isAutoempling", true);
+            if (tag.getBoolean("isAutoempling")) {
+                info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.automelting")+ " " + EnumChatFormatting.GREEN + StatCollector.translateToLocal("info.enabled"));
+            } else
+                info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.automelting") + " " +EnumChatFormatting.RED + StatCollector.translateToLocal("info.automeltingoff"));
+        }
+        if((ItemVajra.hasUpgrade(itemStack, EnumUpgradeType.HOE))){
+            if (tag.getBoolean("isHoe")) {
+                info.add(EnumChatFormatting.LIGHT_PURPLE + StatCollector.translateToLocal("info.hoe") + " " + EnumChatFormatting.GREEN + StatCollector.translateToLocal("enabled"));
+            } else
+                info.add(EnumChatFormatting.LIGHT_PURPLE + StatCollector.translateToLocal("info.hoe") + " " + EnumChatFormatting.RED + StatCollector.translateToLocal("info.hoe2"));
+        }
     }
 
 //    @SideOnly(Side.CLIENT)

@@ -10,6 +10,7 @@ import cpw.mods.fml.relauncher.Side;
 import millaav.vajrapro.VajraPro;
 import millaav.vajrapro.client.gui.GuiHandler;
 import millaav.vajrapro.common.handler.EventHandler;
+import millaav.vajrapro.common.handler.KeyHandler;
 import millaav.vajrapro.common.handler.NetworkHandler;
 import millaav.vajrapro.common.registry.BlockRegistry;
 import millaav.vajrapro.common.registry.ItemRegistry;

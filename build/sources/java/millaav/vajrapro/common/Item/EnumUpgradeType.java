@@ -5,7 +5,7 @@ public enum EnumUpgradeType {
     SILKTOUCH("silktouch"),
     RANGE("range"),
     FORTUNA("fortuna"),
-    DEPTH("depth"),
+    DEPTH("depths"),
     DAMAGE("damage"),
     HOE("hoe"),
     DAMAGE1("damage1"),

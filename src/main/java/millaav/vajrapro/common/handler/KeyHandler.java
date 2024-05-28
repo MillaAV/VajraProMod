@@ -9,12 +9,17 @@ import org.lwjgl.input.Keyboard;
 
 public class KeyHandler{
 
-    public static final KeyBinding changedepths = new KeyBinding("key.changedepths", Keyboard.KEY_I, "key.vajrapro.category");
+    public static final KeyBinding changeautosmelt = new KeyBinding("key.changeautosmelt", Keyboard.KEY_I, "key.vajrapro.category");
+    public static final KeyBinding changedepths = new KeyBinding("key.changedepths", Keyboard.KEY_O, "key.vajrapro.category");
+
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public void onEvent(InputEvent.KeyInputEvent event){
-        if (changedepths.isPressed()){
+        if (changeautosmelt.isPressed()){
             NetworkHandler.sendToServer(new PacketAutosmeltChange());
+        }
+        if (changedepths.isPressed()){
+            NetworkHandler.sendToServer(new PacketDepthChange());
         }
     }
 }

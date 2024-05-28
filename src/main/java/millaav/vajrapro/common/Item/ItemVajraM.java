@@ -18,7 +18,7 @@ public class ItemVajraM extends ItemVajra implements IElectricItem {
         super(0.0F, toolMaterial, new HashSet());;
         setCreativeTab(CreativeTabs.tabTools);
         setMaxStackSize(1);
-        this.maxCharge = 18000000;
+        this.maxCharge = 48000000;
         this.transferLimit = 600000;
         this.effPower = 2000.0F;
         this.efficiencyOnProperMaterial = effPower;

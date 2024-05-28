@@ -6,6 +6,7 @@ import millaav.vajrapro.ItemVajra;
 import millaav.vajrapro.common.Item.EnumUpgradeType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.event.world.BlockEvent;
 
 import java.util.ArrayList;
@@ -18,17 +19,19 @@ public class EventHandler {
         if (heldStack == null) return;
         if (!(heldStack.getItem() instanceof ItemVajra)) return;
         if(!ItemVajra.hasUpgrade(heldStack, EnumUpgradeType.AUTOMELTING)) return;
+        NBTTagCompound tag = ItemVajra.getOrCreateTag(heldStack);
+        if(!tag.getBoolean("autosmeltEnabled")) return;
         ArrayList<ItemStack> newDrops = new ArrayList<>();
         for (ItemStack stack : event.drops) {
             ItemStack smeltingRes = FurnaceRecipes.smelting().getSmeltingResult(stack);
 
             if (smeltingRes != null){
                 int fortuneLevel = 0;
-                if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.FORTUNA)){fortuneLevel=3;}
-                if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.FORTUNA1)){fortuneLevel=5;}
-                if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.FORTUNA2)){fortuneLevel=10;}
+                if(ItemVajra.hasUpgrade(heldStack,EnumUpgradeType.FORTUNA)){fortuneLevel=3;}
+                if(ItemVajra.hasUpgrade(heldStack,EnumUpgradeType.FORTUNA1)){fortuneLevel=5;}
+                if(ItemVajra.hasUpgrade(heldStack,EnumUpgradeType.FORTUNA2)){fortuneLevel=10;}
                 ItemStack smeltingResCopied = smeltingRes.copy();
-                smeltingResCopied.stackSize = event.harvester.worldObj.rand.nextInt(fortuneLevel+1);
+                smeltingResCopied.stackSize = event.harvester.worldObj.rand.nextInt(fortuneLevel+1)+1;
                 newDrops.add(smeltingResCopied);
             } else {
                 newDrops.add(stack);

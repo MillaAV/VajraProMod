@@ -11,7 +11,7 @@ anaglyph3d:false
 advancedOpengl:false
 maxFps:260
 fboEnable:true
-difficulty:0
+difficulty:1
 fancyGraphics:true
 ao:2
 clouds:true
@@ -92,7 +92,8 @@ key_Side Inventory Key:46
 key_Hub Expand Key:45
 key_Gravi Fly Key:33
 key_Gravi Display Hud:35
-key_key.changedepths:23
+key_key.changeautosmelt:23
+key_key.changedepths:24
 soundCategory_master:0.06622516
 soundCategory_music:0.0
 soundCategory_record:1.0

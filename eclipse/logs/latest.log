@@ -1,45 +1,41 @@
-[18:57:09] [main/INFO]: Setting user: Player250
-[18:57:11] [Client thread/INFO]: LWJGL Version: 2.9.1
-[18:57:20] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
-[18:57:22] [Sound Library Loader/INFO]: Sound engine started
-[18:57:23] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[18:57:23] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[18:57:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
-[18:57:25] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[18:57:25] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[18:57:26] [Sound Library Loader/INFO]: Sound engine started
-[18:57:38] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[18:57:38] [Server thread/INFO]: Generating keypair
-[18:57:39] [Server thread/INFO]: Preparing start region for level 0
-[18:57:39] [Server thread/INFO]: Changing view distance to 12, from 10
-[18:57:40] [Server thread/INFO]: Player250[local:E:71377e9d] logged in with entity id 49 at (-119.0982444845832, 73.0, 269.3453284012653)
-[18:57:40] [Server thread/INFO]: Player250 joined the game
-[18:57:43] [Server thread/INFO]: Saving and pausing game...
-[18:57:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[18:57:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[18:57:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[18:57:53] [Client thread/INFO]: [CHAT] The «Hoe» module is incompatible with the «Silk Touch» module.
-[18:57:53] [Client thread/INFO]: [CHAT] The «Hoe» module and «Silk Touch» is§c Disabled
-[18:57:53] [Client thread/INFO]: [CHAT] The «Hoe» module is incompatible with the «Silk Touch» module.
-[18:57:53] [Client thread/INFO]: [CHAT] The «Hoe» module and «Silk Touch» is§c Disabled
-[18:57:55] [Client thread/INFO]: [CHAT] The «Hoe» module is incompatible with the «Silk Touch» module.
-[18:57:55] [Client thread/INFO]: [CHAT] The «Hoe» module and «Silk Touch» is§c Disabled
-[18:57:55] [Client thread/INFO]: [CHAT] The «Hoe» module is incompatible with the «Silk Touch» module.
-[18:57:55] [Client thread/INFO]: [CHAT] The «Hoe» module and «Silk Touch» is§c Disabled
-[18:57:57] [Client thread/INFO]: [CHAT] The «Hoe» module is incompatible with the «Silk Touch» module.
-[18:57:57] [Client thread/INFO]: [CHAT] The «Hoe» module and «Silk Touch» is§c Disabled
-[18:57:57] [Client thread/INFO]: [CHAT] The «Hoe» module is incompatible with the «Silk Touch» module.
-[18:57:57] [Client thread/INFO]: [CHAT] The «Hoe» module and «Silk Touch» is§c Disabled
-[18:58:09] [Server thread/INFO]: [Player250: Your own game mode was set to Survival Mode]
-[18:58:09] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[18:58:19] [Client thread/INFO]: [CHAT] Mode: 3x3
-[18:58:19] [Client thread/INFO]: [CHAT] Mode: 5x5
-[18:58:20] [Client thread/INFO]: [CHAT] Mode: 7x7
-[18:58:20] [Client thread/INFO]: [CHAT] Mode: 1x1
-[18:58:25] [Client thread/INFO]: Stopping!
-[18:58:25] [Server thread/INFO]: Stopping server
-[18:58:25] [Server thread/INFO]: Saving players
-[18:58:25] [Server thread/INFO]: Saving worlds
-[18:58:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[18:58:25] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[18:58:25] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[10:59:12] [main/INFO]: Setting user: Player312
+[10:59:14] [Client thread/INFO]: LWJGL Version: 2.9.1
+[10:59:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
+[10:59:24] [Sound Library Loader/INFO]: Sound engine started
+[10:59:25] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[10:59:25] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[10:59:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:IndustrialCraft 2, FMLFileResourcePack:LuckyRecipeMaker, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:Graviation Suite, FMLFileResourcePack:VajraPro
+[10:59:27] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[10:59:27] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[10:59:27] [Sound Library Loader/INFO]: Sound engine started
+[10:59:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[10:59:30] [Server thread/INFO]: Generating keypair
+[10:59:30] [Server thread/INFO]: Preparing start region for level 0
+[10:59:31] [Server thread/INFO]: Changing view distance to 12, from 10
+[10:59:31] [Server thread/INFO]: Player312[local:E:98e94f2c] logged in with entity id 259 at (-117.73794331010785, 73.0, 280.1111165238099)
+[10:59:31] [Server thread/INFO]: Player312 joined the game
+[10:59:38] [Client thread/INFO]: [CHAT] Autosmelt is now: disabled
+[10:59:38] [Client thread/INFO]: [CHAT] Autosmelt is now: enabled
+[10:59:39] [Client thread/INFO]: [CHAT] Autosmelt is now: disabled
+[10:59:39] [Client thread/INFO]: [CHAT] Autosmelt is now: enabled
+[10:59:41] [Client thread/INFO]: [CHAT] Autosmelt is now: disabled
+[10:59:43] [Client thread/INFO]: [CHAT] Autosmelt is now: enabled
+[10:59:56] [Server thread/INFO]: [Player312: Given [Module Depth 7x7 (Lvl 3)] * 1 to Player312]
+[10:59:56] [Client thread/INFO]: [CHAT] Given [Module Depth 7x7 (Lvl 3)] * 1 to Player312
+[11:00:00] [Client thread/INFO]: [CHAT] Autosmelt is now: disabled
+[11:00:03] [Client thread/INFO]: [CHAT] Autosmelt is now: enabled
+[11:00:06] [Client thread/INFO]: [CHAT] Autosmelt is now: disabled
+[11:00:09] [Client thread/INFO]: [CHAT] Mode: 3x3
+[11:00:09] [Client thread/INFO]: [CHAT] Mode: 5x5
+[11:00:10] [Client thread/INFO]: [CHAT] Mode: 7x7
+[11:00:12] [Server thread/INFO]: Saving and pausing game...
+[11:00:12] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:00:12] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:00:12] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:00:13] [Client thread/INFO]: Stopping!
+[11:00:13] [Server thread/INFO]: Stopping server
+[11:00:13] [Server thread/INFO]: Saving players
+[11:00:13] [Server thread/INFO]: Saving worlds
+[11:00:13] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:00:13] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:00:13] [Server thread/INFO]: Saving chunks for level 'New World'/The End

@@ -127,11 +127,15 @@ public class ContainerToolStation extends Container {
 
         @Override
         public void putStack(ItemStack stack) {
+            if(inv.getStackInSlot(getSlotIndex())!=null){
+                ItemVajra.removeUpgrade(vajraSlot.getStack(), inv.getStackInSlot(getSlotIndex()));
+            }
             super.putStack(stack);
             if(stack!=null && stack.getItem()!=null){
                 ItemVajra.addUpgrade(vajraSlot.getStack(), stack);
             }
         }
+
 
         @Override
         public void onPickupFromSlot(EntityPlayer player, ItemStack stack) {

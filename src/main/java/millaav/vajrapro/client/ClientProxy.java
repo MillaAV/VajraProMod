@@ -17,7 +17,9 @@ public class ClientProxy extends CommonProxy {
 
     public void init(FMLInitializationEvent event){
         super.init(event);
+        ClientRegistry.registerKeyBinding(KeyHandler.changeautosmelt);
         ClientRegistry.registerKeyBinding(KeyHandler.changedepths);
+        FMLCommonHandler.instance().bus().register(new KeyHandler());
     }
 
     public void postInit(FMLPostInitializationEvent event){

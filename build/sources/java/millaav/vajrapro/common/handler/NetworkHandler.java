@@ -11,6 +11,7 @@ public class NetworkHandler {
 
     public static void init(){
         wrapper.registerMessage(PacketAutosmeltChangeHandler.class, PacketAutosmeltChange.class,0, Side.SERVER);
+        wrapper.registerMessage(PacketDepthChangeHandler.class, PacketDepthChange.class ,0, Side.SERVER);
     }
 
     public static void sendToPlayer(IMessage message, EntityPlayer player) {

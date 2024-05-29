@@ -3,6 +3,7 @@ package millaav.vajrapro.common.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import ic2.api.item.IElectricItem;
+import ic2.core.IC2;
 import millaav.vajrapro.ItemVajra;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +17,7 @@ public class ItemVajraM extends ItemVajra implements IElectricItem {
 
     public ItemVajraM(Item.ToolMaterial toolMaterial) {
         super(0.0F, toolMaterial, new HashSet());;
-        setCreativeTab(CreativeTabs.tabTools);
+        this.setCreativeTab(IC2.tabIC2);
         setMaxStackSize(1);
         this.maxCharge = 48000000;
         this.transferLimit = 600000;

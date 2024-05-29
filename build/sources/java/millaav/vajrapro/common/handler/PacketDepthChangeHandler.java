@@ -23,9 +23,6 @@ public class PacketDepthChangeHandler implements IMessageHandler<PacketDepthChan
         NBTTagCompound tag = ItemVajra.getOrCreateTag((player.getHeldItem()));
         maxDepth = 1;
         int depth = tag.getInteger("depth");
-        if(depth==0){
-            depth = 1;
-        }
         if (ItemVajra.hasUpgrade(player.getHeldItem(), EnumUpgradeType.DEPTH)) {
             maxDepth = 3;
         } else if (ItemVajra.hasUpgrade(player.getHeldItem(), EnumUpgradeType.DEPTH1)) {
@@ -35,7 +32,7 @@ public class PacketDepthChangeHandler implements IMessageHandler<PacketDepthChan
         }
         depth = (depth + 2)%(maxDepth+1);
         tag.setInteger("depth", depth);
-        player.addChatMessage(new ChatComponentText("Depth is now: "+(tag.getInteger("depth"))));
+        player.addChatMessage(new ChatComponentText("Depth is now: "+(1+tag.getInteger("depth"))));
         return null;
     }
 }

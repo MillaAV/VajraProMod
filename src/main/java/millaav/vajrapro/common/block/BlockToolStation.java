@@ -2,6 +2,7 @@ package millaav.vajrapro.common.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import ic2.core.IC2;
 import millaav.vajrapro.VajraPro;
 import millaav.vajrapro.common.tile.TileToolStation;
 import net.minecraft.block.Block;
@@ -27,11 +28,11 @@ public class BlockToolStation extends Block {
     private IIcon topBottom;
     public BlockToolStation() {
         super(Material.iron);
-        setCreativeTab(CreativeTabs.tabDecorations);
-        setBlockName("toolStantion");
-        setHardness(5.0F);
-        setResistance(10.0F);
-        setStepSound(soundTypeMetal);
+        this.setCreativeTab(IC2.tabIC2);
+        this.setBlockName("toolStantion");
+        this.setHardness(5.0F);
+        this.setResistance(10.0F);
+        this.setStepSound(soundTypeMetal);
     }
 
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase placer, ItemStack stack) {

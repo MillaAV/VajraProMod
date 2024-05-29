@@ -550,7 +550,7 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.radius") + " " + EnumChatFormatting.WHITE + (1 + (tag.getInteger("radius") * 2)) +
                 "x" + (1 + (tag.getInteger("radius") * 2)));
         if((ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.DEPTH)) || (ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.DEPTH1)) || (ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.DEPTH2))){
-            info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.depth") + " " + EnumChatFormatting.WHITE + (1 + (tag.getInteger("depth"))));
+            info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.depth") + " " + EnumChatFormatting.WHITE + (1 + tag.getInteger("depth")));
         }
         if(ItemVajra.hasUpgrade(itemStack,EnumUpgradeType.SILKTOUCH)){
             info.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("info.silktouch") + " " + EnumChatFormatting.GREEN + StatCollector.translateToLocal("info.enabled"));

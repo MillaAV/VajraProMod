@@ -2,6 +2,7 @@ package millaav.vajrapro.common.Item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import ic2.core.IC2;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -15,7 +16,7 @@ public class ItemUpgrade extends Item {
     @SideOnly(Side.CLIENT)
     private IIcon[] icons;
     public ItemUpgrade(){
-        setCreativeTab(CreativeTabs.tabTools);
+        setCreativeTab(IC2.tabIC2);
         setMaxStackSize(1);
         setHasSubtypes(true);
         setMaxDamage(0);

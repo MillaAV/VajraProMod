@@ -4,7 +4,6 @@ import millaav.vajrapro.ItemVajra;
 import millaav.vajrapro.common.Item.ItemVajraC;
 import millaav.vajrapro.common.Item.ItemVajraP;
 import millaav.vajrapro.common.registry.ItemRegistry;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

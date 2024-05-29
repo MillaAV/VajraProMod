@@ -9,70 +9,70 @@ import net.minecraft.item.ItemStack;
 public class RecipeRegistry {
 
     public static void init(){
-        //Мотыга
+        //Hoe
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.HOE.ordinal()), "ACA"," E ", "ACA",
                 'A', Ic2Items.advancedAlloy, 'C', new ItemStack(Ic2Items.chargingREBattery.getItem(),1, 32767),
                 'E', new ItemStack(Ic2Items.electricHoe.getItem(),1, 32767));
 
-        //Авто-переплавка
+        //Auto-smelt
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.AUTOMELTING.ordinal()), "FAF", "OPO", "FAF",
                 'F', Items.blaze_powder, 'A', new ItemStack(Ic2Items.energyCrystal.getItem(), 1,32767),
                 'O', Ic2Items.denseplateobsidian,'P', new ItemStack(Ic2Items.electroFurnace.getItem(),1, 2));
 
-        //SkillTouch
+        //SilkTouch
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.SILKTOUCH.ordinal()), "ABA","BFB", "ABA",
                 'A', new ItemStack(Ic2Items.reactorHeatSwitchDiamond.getItem(), 1, 32767),
                 'B', Ic2Items.diamondblockcuttingblade, 'F', new ItemStack(ItemRegistry.coolingcore, 1));
 
-        //Удача 1 уровня 3
+        //Fortuna 1 lvl - 3
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.FORTUNA.ordinal()),"IPI","EUE","IPI",
                 'I', Ic2Items.iridiumPlate, 'P',Ic2Items.advancedCircuit, 'E', new ItemStack(Ic2Items.energyCrystal.getItem(),1,32767),
                 'U', new ItemStack(Ic2Items.uuMatterCell.getItem(),1, 3));
 
-        //Удача 2 уровня 5
+        //Fortuna 2 lvl - 5
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.FORTUNA1.ordinal()),"IPI","FDF","IPI",
                 'I', Ic2Items.iridiumPlate, 'P', new ItemStack(ItemRegistry.goldplatedenergycrystal, 1, 32767),
                 'D', new ItemStack(Ic2Items.iridiumDrill.getItem(),1,32767),
                 'F', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.FORTUNA.ordinal()));
 
-        //Удача 3 уровня 10
+        //Fortuna 3 lvl - 10
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.FORTUNA2.ordinal()),"FPF","LRL","FPF",
                 'F', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.FORTUNA1.ordinal()),
                 'P', new ItemStack(ItemRegistry.coolingcore, 1),
                 'L', new ItemStack(Ic2Items.lapotronCrystal.getItem(),1,32767), 'R', Ic2Items.RTGPellets);
 
-        //Глубина копания 1 уровня
+        //Depth 1 lvl (3x3)
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DEPTH.ordinal()), "EPE","HFH","EPE",
                 'E', new ItemStack(Ic2Items.energyCrystal.getItem(),1,32767), 'P', Ic2Items.advancedCircuit,'F',Ic2Items.fluidEjectorUpgrade,
                 'H', new ItemStack(Ic2Items.reactorVentDiamond.getItem()));
 
-        //Глубина копания 2 уровня
+        //Depth 2 lvl (5x5)
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DEPTH1.ordinal()), "CPC","MDM","CPC",
                 'C', new ItemStack(Ic2Items.reactorCoolantSimple.getItem(),1,1), 'P', new ItemStack(ItemRegistry.superconductorcover, 1),
                 'D',new ItemStack(Ic2Items.diamondDrill.getItem(),1,32767),
                 'M', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DEPTH.ordinal()));
 
-        //Глубина копания 3 уровня
+        //Depth 3 lvl (7x7)
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DEPTH2.ordinal()), "MPM","CBC","MPM",
                 'B', new ItemStack(ItemRegistry.coolingcore, 1), 'P', Ic2Items.advancedCircuit,'C', new ItemStack(Ic2Items.reactorCoolantSix.getItem(),1,1),
                 'M', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DEPTH1.ordinal()));
 
-        //Урон по радиусу
+        //RangeDamage
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.RANGE.ordinal()), "IAI","BMB","IAI",
                 'A', new ItemStack(Items.golden_apple,1,1), 'I', Ic2Items.iridiumPlate,'B',new ItemStack(Ic2Items.chargingAdvBattery.getItem(),1, 32767),
                 'M', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DAMAGE1.ordinal()));
 
-        //Урон 1 уровня (21)
+        //Damage 1 lvl (21)
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DAMAGE.ordinal()), "APA","ESE","APA",
                 'A', Ic2Items.advancedAlloy, 'P', Ic2Items.advancedCircuit,'E',Items.emerald,
                 'S', Items.diamond_sword);
 
-        //Урон 2 уровня (61)
+        //Damage 2 lvl (61)
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DAMAGE1.ordinal()), "EPE","MSM","EPE",
                 'E', new ItemStack(Ic2Items.energyCrystal.getItem(),1,32767), 'P', Ic2Items.advancedCircuit,'S',new ItemStack(Ic2Items.nanoSaber.getItem(),1,32767),
                 'M', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DAMAGE.ordinal()));
 
-        //Урон 3 уровня (121)
+        //Damage 3 lvl (121)
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DAMAGE2.ordinal()), "MAM","LNL","MAM",
                 'A', Ic2Items.advancedCircuit, 'N', Items.nether_star,'L',new ItemStack(Ic2Items.lapotronCrystal.getItem(),1,32767),
                 'M', new ItemStack(ItemRegistry.upgrade, 1, EnumUpgradeType.DAMAGE1.ordinal()));
@@ -113,17 +113,17 @@ public class RecipeRegistry {
                 'V', new ItemStack(ItemRegistry.vajracore, 1), 'L', new ItemStack(Ic2Items.lapotronCrystal.getItem(),1,32767));
 
 
-        //УЛУЧШЕНИE НА ВАДЖРУ 1 УРОВНЯ
+        //Upgrade 1 lvl
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.tier1upgrade, 1), "ILI", "ACA", "ILI",
                 'I', Ic2Items.iridiumPlate, 'A', Ic2Items.advancedAlloy, 'L',
                 new ItemStack(ItemRegistry.goldplatedenergycrystal,1,32767), 'C', new ItemStack(ItemRegistry.vajracore1, 1));
 
-        //УЛУЧШЕНИE НА ВАДЖРУ 2 УРОВНЯ
+        //Upgrade 2 lvl
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.tier2upgrade, 1), "LUL", "CVC", "LUL",
                 'U', new ItemStack(ItemRegistry.tier1upgrade, 1), 'L', new ItemStack(Ic2Items.lapotronCrystal.getItem(),1,32767),
                 'C', new ItemStack(ItemRegistry.coolingcore, 1), 'V', new ItemStack(ItemRegistry.vajracore2, 1));
 
-      //Желтый кристалл
+        //GoldCrystall
         AdvRecipe.addAndRegister(new ItemStack(ItemRegistry.goldplatedenergycrystal, 1, 32767), "GPG", "GEG","GPG",
                 'G', Ic2Items.goldDust, 'P', Ic2Items.electronicCircuit,
                 'E', new ItemStack(Ic2Items.energyCrystal.getItem(), 1, 32767));

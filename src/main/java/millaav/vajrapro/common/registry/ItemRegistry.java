@@ -3,7 +3,6 @@ package millaav.vajrapro.common.registry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import ic2.core.IC2;
 import millaav.vajrapro.common.Item.*;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class ItemRegistry {

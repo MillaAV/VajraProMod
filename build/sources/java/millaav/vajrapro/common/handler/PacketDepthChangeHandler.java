@@ -8,6 +8,7 @@ import millaav.vajrapro.common.Item.EnumUpgradeType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.StatCollector;
 
 public class PacketDepthChangeHandler implements IMessageHandler<PacketDepthChange, IMessage> {
 
@@ -32,7 +33,7 @@ public class PacketDepthChangeHandler implements IMessageHandler<PacketDepthChan
         }
         depth = (depth + 2)%(maxDepth+1);
         tag.setInteger("depth", depth);
-        player.addChatMessage(new ChatComponentText("Depth is now: "+(1+tag.getInteger("depth"))));
+        player.addChatMessage(new ChatComponentText( StatCollector.translateToLocal("info.depthisnow") + " " + (1+tag.getInteger("depth"))));
         return null;
     }
 }

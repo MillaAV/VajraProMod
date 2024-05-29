@@ -2,8 +2,10 @@ package millaav.vajrapro.common.Item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import ic2.core.IC2;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -11,11 +13,13 @@ import net.minecraft.util.MathHelper;
 
 import java.util.List;
 
+import static java.awt.SystemColor.info;
+
 public class ItemUpgrade extends Item {
     @SideOnly(Side.CLIENT)
     private IIcon[] icons;
     public ItemUpgrade(){
-        setCreativeTab(CreativeTabs.tabTools);
+        setCreativeTab(IC2.tabIC2);
         setMaxStackSize(1);
         setHasSubtypes(true);
         setMaxDamage(0);
@@ -42,6 +46,8 @@ public class ItemUpgrade extends Item {
             this.icons[i] = iconRegister.registerIcon(this.getIconString() + "_" + EnumUpgradeType.values()[i].key);
         }
     }
+
+    public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean par4) {ModulesInfo.addInfoToUpgrade(stack, info);}
 
     @Override
     public void getSubItems(Item item, CreativeTabs creativeTab, List itemList) {

@@ -90,9 +90,6 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         } else if (ItemVajra.hasUpgrade(stack, EnumUpgradeType.DAMAGE2)) {
             attackDamage = 121;
         }
-//        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH)){tag.setInteger("depth", 2);}
-//        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH1)){tag.setInteger("depth", 4);}
-//        if(ItemVajra.hasUpgrade(stack,EnumUpgradeType.DEPTH2)){tag.setInteger("depth", 6);}
         Map<Integer, Integer> enchantmentMap = new HashMap<>();
         if(ItemVajra.hasUpgrade(stack, EnumUpgradeType.FORTUNA)){
             enchantmentMap.put(Enchantment.fortune.effectId, 3);
@@ -133,7 +130,6 @@ public class ItemVajra extends ItemTool implements IElectricItem {
 
 
     public static NBTTagCompound getOrCreateTag(ItemStack stack) {
-
         if (stack.stackTagCompound == null) {
             stack.stackTagCompound = new NBTTagCompound();
         }
@@ -445,85 +441,6 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         return false;
     }
 
-//    public boolean onItemUse(ItemStack itemstack, EntityPlayer entityplayer, World world, int i, int j, int k, int side, float a, float b, float c) {
-//        Integer toolMode = readToolMode(itemstack);
-//        if (!VajraPro.disableVajraAccurate && toolMode == 1) {
-//            try {
-//                int metaData = world.getBlockMetadata(i, j, k);
-//                Block block = world.getBlock(i, j, k);
-//                if (block != Blocks.bedrock && block != Blocks.mob_spawner && block.canHarvestBlock(entityplayer, metaData) && block.getItemDropped(metaData, world.rand, 1) != null) {
-//                    boolean var24;
-//                    if (!ElectricItem.manager.canUse(itemstack, (double)this.energyPerOperation)) {
-//                        var24 = false;
-//                        return var24;
-//                    }
-//
-//                    if (VajraPro.isSimulating()) {
-//                        Boolean dropFlag = false;
-//                        if (block.canSilkHarvest(world, entityplayer, i, j, k, metaData)) {
-//                            ArrayList<ItemStack> items = new ArrayList();
-//                            ItemStack stack = this.createStackedBlock(block, metaData);
-//                            if (stack != null) {
-//                                items.add(stack);
-//                            }
-//
-//                            ForgeEventFactory.fireBlockHarvesting(items, world, block, i, j, k, metaData, 0, 1.0F, true, entityplayer);
-//                            Iterator i$ = items.iterator();
-//
-//                            while(i$.hasNext()) {
-//                                ItemStack is = (ItemStack)i$.next();
-//                                VajraPro.dropAsEntity(world, i, j, k, is);
-//                            }
-//
-//                            dropFlag = true;
-//                        } else {
-//                            int count = block.quantityDropped(metaData, EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, itemstack), world.rand);
-//                            if (count > 0) {
-//                                int exp = block.getExpDrop(world, metaData, EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, itemstack));
-//                                block.dropXpOnBlockBreak(world, i, j, k, exp);
-//                                block.harvestBlock(world, entityplayer, i, j, k, metaData);
-//                                block.onBlockHarvested(world, i, j, k, metaData, entityplayer);
-//                                float blockHardness = block.getBlockHardness(world, i, j, k);
-//                                if (blockHardness > 0.0F) {
-//                                    this.onBlockDestroyed(itemstack, world, block, i, j, k, entityplayer);
-//                                }
-//
-//                                world.func_147479_m(i, j, k);
-//                                dropFlag = true;
-//                            }
-//                        }
-//
-//                        if (dropFlag) {
-//                            world.setBlockToAir(i, j, k);
-//                            world.func_147479_m(i, j, k);
-//                            world.playAuxSFX(2001, i, j, k, Block.getIdFromBlock(block) + (metaData << 12));
-//                            ElectricItem.manager.use(itemstack, (double)this.energyPerOperation, entityplayer);
-//                        }
-//                    }
-//
-//                    var24 = true;
-//                    return var24;
-//                }
-//            } catch (Exception var22) {
-//                VajraPro.addLog("Vajra: Error in destroy function (" + var22.getLocalizedMessage() + ")");
-//            } finally {
-//                ;
-//            }
-//        }
-//
-//        return false;
-//    }
-
-//    protected ItemStack createStackedBlock(Block block, int meta) {
-//        int j = 0;
-//        Item item = Item.getItemFromBlock(block);
-//        if (item != null && item.getHasSubtypes()) {
-//            j = meta;
-//        }
-//
-//        return new ItemStack(item, 1, j);
-//    }
-
     public float getDigSpeed(ItemStack tool, Block block, int meta) {
         if (!ElectricItem.manager.canUse(tool, (double) this.epo / 10)) {
             return 1.0F;
@@ -569,14 +486,6 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         }
     }
 
-//    @SideOnly(Side.CLIENT)
-//    public void getSubItems(Item item, CreativeTabs var2, List var3) {
-//        ItemStack var4 = new ItemStack(this, 1);
-//        ElectricItem.manager.charge(var4, 2.147483647E9, Integer.MAX_VALUE, true, false);
-//        var3.add(var4);
-//        var3.add(new ItemStack(this, 1, this.getMaxDamage()));
-//    }
-
     public int getItemEnchantability() {return 0;}
     @Override
     public int getTier(ItemStack itemStack) {
@@ -596,9 +505,7 @@ public class ItemVajra extends ItemTool implements IElectricItem {
     public double getMaxCharge(ItemStack itemStack) {
         return this.maxCharge;
     }
-    public double getTransferLimit(ItemStack itemStack) {
-        return this.transferLimit;
-    }
+    public double getTransferLimit(ItemStack itemStack) {return this.transferLimit;}
     public boolean canHarvestBlock(Block block, ItemStack stack) {
         return block != Blocks.bedrock;
     }

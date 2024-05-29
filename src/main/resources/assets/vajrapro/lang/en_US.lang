@@ -1,7 +1,8 @@
+#Vajra
 item.vajra.name=Vajra
 item.vajrap.name=Vajra Pro
 item.vajram.name=Vajra Max
-
+#Modules
 item.upgrade.hoe.name=Module Hoe (Lvl 1)
 item.upgrade.automelting.name=Module Auto-Melting (Lvl 1)
 item.moduleexpansionDig.name=Module Expansion Dig (Lvl 1)
@@ -12,12 +13,14 @@ item.upgrade.depth2.name=Module Depth 7x7 (Lvl 3)
 item.upgrade.damage.name=Module Damage (Lvl 1)
 item.upgrade.damage1.name=Module Damage (Lvl 2)
 item.upgrade.damage2.name=Module Damage (Lvl 3)
-item.upgrade.range.name=Module Range (Lvl 1)
+item.upgrade.range.name=Module Range Attack (Lvl 1)
 item.upgrade.fortuna.name=Module Fortuna (Lvl 1)
 item.upgrade.fortuna1.name=Module Fortuna (Lvl 2)
 item.upgrade.fortuna2.name=Module Fortuna (Lvl 3)
 item.upgrade.silktouch.name=Module SilkTouch (Lvl 1)
-
+item.tier1upgrade.name=Upgrade Vajra (Lvl 1)
+item.tier2upgrade.name=Upgrade Vajra (Lvl 2)
+#Items
 item.superconductorcover.name=Super Conductor Cover
 item.superconductor.name=Super Conductor
 item.coolingcore.name=Cooling Core
@@ -27,22 +30,15 @@ item.magnetron2.name=Magnetron (Lvl 3)
 item.vajracore.name=Vajra Core (Lvl 1)
 item.vajracore1.name=Vajra Core (Lvl 2)
 item.vajracore2.name=Vajra Core (Lvl 3)
-
 ic2.goldplatedenergycrystal=Gold-plated energy crystal
 
-
-item.tier1upgrade.name=Upgrade Vajra (Lvl 1)
-item.tier2upgrade.name=Upgrade Vajra (Lvl 2)
-
+#Blocks
 tile.toolStantion.name=Module Stantion
 
+#Text
 block.guitoolstation.name=Tool Station
 block.guitoolstation.skto="Silk Touch" module can not be combined
 block.guitoolstation.with=with "Hoe" modules
-
-
-message.text.enabled=enabled
-message.text.disabled=disabled
 
 key.vajrapro.category=VajraPro
 key.changedepths=Сhange depths
@@ -56,4 +52,6 @@ info.silktouch=Silk Touch:
 info.automelting=Auto-Melting:
 info.hoeandsilktouch=The «Hoe» module is incompatible with the «Silk Touch» module.
 info.hoeandsilktouch1=The «Hoe» module and «Silk Touch» is
+info.depthisnow=Depth is now:
+info.about.modules=Activate modules in ToolStation
 

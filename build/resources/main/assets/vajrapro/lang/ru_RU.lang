@@ -4,7 +4,7 @@ item.vajram.name=Ваджра Max
 
 item.upgrade.hoe.name=Модуль Мотыга (Lvl 1)
 item.upgrade.automelting.name=Модуль Авто-переплавка (Lvl 1)
-item.upgrade.depth.name=Модуль Глубина копания 3x3 (Lvl 1)
+item.upgrade.depths.name=Модуль Глубина копания 3x3 (Lvl 1)
 item.upgrade.depth1.name=Модуль Глубина копания 5x5 (Lvl 2)
 item.upgrade.depth2.name=Модуль Глубина копания 7x7 (Lvl 3)
 item.upgrade.damage.name=Модуль Урон 21 (Lvl 1)
@@ -25,7 +25,6 @@ item.magnetron2.name=Магнетрон (Lvl 3)
 item.vajracore.name=Ядро ваджры (Lvl 1)
 item.vajracore1.name=Ядро ваджры (Lvl 2)
 item.vajracore2.name=Ядро ваджры (Lvl 3)
-
 ic2.goldplatedenergycrystal=Позолоченный энергетический кристалл
 
 
@@ -39,18 +38,16 @@ block.guitoolstation.skto=Модуль "Шелковое касание" не с
 block.guitoolstation.with=с модулем "Мотыга"
 
 
-message.text.enabled=enabled
-message.text.disabled=disabled
-
 key.vajrapro.category=VajraPro
 key.changedepths=Режим глубины
 
 info.radius=Радиус:
 info.depth=Глубина:
-info.hoe=Миотыга:
+info.hoe=Мотыга:
 info.enabled=Включено
 info.disabled=Выключено
 info.silktouch=Шелковое касание:
 info.automelting=Авто-переплавка:
 info.hoeandsilktouch=Модуль «Мотыга» не совместим с модулем «Шелковое касание».
 info.hoeandsilktouch1=Модули «Шелковое касание» и «Мотыга»
+info.depthisnow=Режим копания глубины:

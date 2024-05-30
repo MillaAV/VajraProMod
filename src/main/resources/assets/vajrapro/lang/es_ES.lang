@@ -1,0 +1,53 @@
+item.vajra.name=Vajra
+item.vajrap.name=Vajra Pro
+item.vajram.name=Vajra Max
+
+item.upgrade.hoe.name=Módulo Azada (Lvl 1)
+item.upgrade.automelting.name=Módulo Automática (Lvl 1)
+item.upgrade.depths.name=Profundidad Módulo 3x3 (Lvl 1)
+item.upgrade.depth1.name=Profundidad Módulo 5x5 (Lvl 2)
+item.upgrade.depth2.name=Profundidad Módulo 7x7 (Lvl 3)
+item.upgrade.damage.name=Daño Módulo (Lvl 1)
+item.upgrade.damage1.name=Daño Módulo (Lvl 2)
+item.upgrade.damage2.name=Daño Módulo (Lvl 3)
+item.upgrade.range.name=Ataque Rango Módulo (Lvl 1)
+item.upgrade.fortuna.name=Módulo suerte (Lvl 1)
+item.upgrade.fortuna1.name=Módulo suerte (Lvl 2)
+item.upgrade.fortuna2.name=Módulo suerte (Lvl 3)
+item.upgrade.silktouch.name=Módulo Silk Touch (Lvl 1)
+item.tier1upgrade.name=Actualizar Vajra (Lvl 1)
+item.tier2upgrade.name=Actualizar Vajra (Lvl 2)
+
+item.superconductorcover.name=Cubierta Súper Conductor
+item.superconductor.name=Súper Conductor
+item.coolingcore.name=Núcleo Refrigeración
+item.magnetron.name=Magnetrón (Lvl 1)
+item.magnetron1.name=Magnetrón (Lvl 2)
+item.magnetron2.name=Magnetrón (Lvl 3)
+item.vajracore.name=Núcleo Vajra(Lvl 1)
+item.vajracore1.name=Núcleo Vajra (Lvl 2)
+item.vajracore2.name=Núcleo Vajra (Lvl 3)
+ic2.goldplatedenergycrystal=Cristal de energía bañado en oro
+
+#Blocks
+tile.toolStantion.name=Estación Módulos
+
+#Text
+block.guitoolstation.name=Estación Módulos
+block.guitoolstation.skto=El módulo «Silk Touch» no se puede combinar
+block.guitoolstation.with=con módulos" Hoe"
+
+key.vajrapro.category=VajraPro
+key.changedepths=Cambio Profundidades
+key.changeautosmelt=Cambio Automática
+
+info.radius=Radius:
+info.depth=Profundidad:
+info.hoe=Azada:
+info.enabled=Habilitado
+info.disabled=Discapacitados
+info.silktouch=Silk Touch:
+info.automelting=Automática:
+info.hoeandsilktouch=El módulo «Azada» es incompatible con el módulo «Silk Touch».
+info.hoeandsilktouch1=El módulo «Azada» y «Silk Touch» Discapacitados
+info.depthisnow=Profundidad es ahora:

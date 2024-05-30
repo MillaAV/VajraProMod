@@ -1,0 +1,54 @@
+#Vajra
+item.vajra.name=Vajra
+item.vajrap.name=Vajra Pro
+item.vajram.name=Vajra Max
+#Modules
+item.upgrade.hoe.name=Modul Hacke (Lvl 1)
+item.upgrade.automelting.name=Modul Auto-Umschmelzen (Lvl 1)
+item.upgrade.depths.name=Modul Grabtiefe 3x3 (Lvl 1)
+item.upgrade.depth1.name=Modul Grabtiefe 5x5 (Lvl 2)
+item.upgrade.depth2.name=Modul Grabtiefe 7x7 (Lvl 3)
+item.upgrade.damage.name=Modul Angriff (Lvl 1)
+item.upgrade.damage1.name=Modul Angriff (Lvl 2)
+item.upgrade.damage2.name=Modul Angriff (Lvl 3)
+item.upgrade.range.name=Modul Angriffsradius (Lvl 1)
+item.upgrade.fortuna.name=Modul Fortuna (Lvl 1)
+item.upgrade.fortuna1.name=Modul Fortuna (Lvl 2)
+item.upgrade.fortuna2.name=Modul Fortuna (Lvl 3)
+item.upgrade.silktouch.name=Modul SilkTouch (Lvl 1)
+item.tier1upgrade.name=Upgrade Vajra (Lvl 1)
+item.tier2upgrade.name=Upgrade Vajra (Lvl 2)
+#Items
+item.superconductorcover.name=Superleiterabdeckung
+item.superconductor.name=Superleiter
+item.coolingcore.name=Kühlkern
+item.magnetron.name=Magnetron (Lvl 1)
+item.magnetron1.name=Magnetron (Lvl 2)
+item.magnetron2.name=Magnetron (Lvl 3)
+item.vajracore.name=Vajra-Kern (Lvl 1)
+item.vajracore1.name=Vajra-Kern (Lvl 2)
+item.vajracore2.name=Vajra-Kern (Lvl 3)
+ic2.goldplatedenergycrystal=Vergoldeter Energiekristall
+
+#Blocks
+tile.toolStantion.name=Modul station
+
+#Text
+block.guitoolstation.name=Modul station
+block.guitoolstation.skto="Silk Touch"-Modul kann nicht kombiniert werden
+block.guitoolstation.with=mit "Hacke"-Modulen
+
+key.vajrapro.category=VajraPro
+key.changedepths=Ändern Tiefe
+key.changeautosmelt=Tiefe Auto-Umschmelzen
+
+info.radius=Radius:
+info.depth=Tiefe:
+info.hoe=Hacke:
+info.enabled=Aktiviert
+info.disabled=Behinderte
+info.silktouch=Seide berühren:
+info.automelting=Auto-Umschmelzen:
+info.hoeandsilktouch=Das Modul «Hacke» ist nicht mit dem Modul «Seide berühren» kompatibel.
+info.hoeandsilktouch1=Das «Hacke» Modul und «Seide berühren» ist
+info.depthisnow=Tiefe ist jetzt:

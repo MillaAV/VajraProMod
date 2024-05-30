@@ -39,7 +39,8 @@ block.guitoolstation.with=с модулем "Мотыга"
 
 
 key.vajrapro.category=VajraPro
-key.changedepths=Режим глубины
+key.changedepths=Режим Глубина
+key.changeautosmelt=Режим Авто-переплавка
 
 info.radius=Радиус:
 info.depth=Глубина:

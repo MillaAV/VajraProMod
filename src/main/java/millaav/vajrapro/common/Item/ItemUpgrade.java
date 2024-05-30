@@ -47,8 +47,6 @@ public class ItemUpgrade extends Item {
         }
     }
 
-    public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean par4) {ModulesInfo.addInfoToUpgrade(stack, info);}
-
     @Override
     public void getSubItems(Item item, CreativeTabs creativeTab, List itemList) {
         for (int i = 0; i < EnumUpgradeType.values().length; ++i) {

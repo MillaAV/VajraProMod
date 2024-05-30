@@ -1,0 +1,54 @@
+#Vajra
+item.vajra.name=Vajra
+item.vajrap.name=Vajra Pro
+item.vajram.name=Vajra Max
+#Modules
+item.upgrade.hoe.name=Module Houe (Lvl 1)
+item.upgrade.automelting.name=Module Automatique (Lvl 1)
+item.upgrade.depths.name=Module Profondeur 3x3 (Lvl 1)
+item.upgrade.depth1.name=Module Profondeur 5x5 (Lvl 2)
+item.upgrade.depth2.name=Module Profondeur 7x7 (Lvl 3)
+item.upgrade.damage.name=Module Dommages (Lvl 1)
+item.upgrade.damage1.name=Module Dommages (Lvl 2)
+item.upgrade.damage2.name=Module Dommages (Lvl 3)
+item.upgrade.range.name=Module Кayon d'attaque (Lvl 1)
+item.upgrade.fortuna.name=Module Fortuna (Lvl 1)
+item.upgrade.fortuna1.name=Module Fortuna (Lvl 2)
+item.upgrade.fortuna2.name=Module Fortuna (Lvl 3)
+item.upgrade.silktouch.name=Module SoyeuxToucher (Lvl 1)
+item.tier1upgrade.name=Mise niveau Vajra (Lvl 1)
+item.tier2upgrade.name=Mise niveau Vajra (Lvl 2)
+
+item.superconductorcover.name=Couverture Super Conducteur
+item.superconductor.name=Super Conducteur
+item.coolingcore.name=Noyau Refroidissement
+item.magnetron.name=Magnétron (Lvl 1)
+item.magnetron1.name=Magnétron (Lvl 2)
+item.magnetron2.name=Magnétron (Lvl 3)
+item.vajracore.name=Vajra Noyau (Lvl 1)
+item.vajracore1.name=Vajra Noyau (Lvl 2)
+item.vajracore2.name=Vajra Noyau (Lvl 3)
+ic2.goldplatedenergycrystal=Cristal d'énergie plaqué or
+
+#Blocks
+tile.toolStantion.name=Station Modulaire
+
+#Text
+block.guitoolstation.name=Station Modulaire
+block.guitoolstation.skto=Le module «SoieTouche» ne peut pas être combiné
+block.guitoolstation.with=avec modules «Houe»
+
+key.vajrapro.category=VajraPro
+key.changedepths=Change les profondeurs
+key.changeautosmelt=Change les Automatique
+
+info.radius=Rayon:
+info.depth=Profondeur:
+info.hoe=Houe:
+info.enabled=Activé
+info.disabled=Désactivé
+info.silktouch=SoieTouche:
+info.automelting=Automatique:
+info.hoeandsilktouch=Le module «Houe» est incompatible avec le module «SoieTouche» .
+info.hoeandsilktouch1=Le module «Houe» et «SoieToucheh»:
+info.depthisnow=Profondeur est maintenant:

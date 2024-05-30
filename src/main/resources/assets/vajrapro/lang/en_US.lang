@@ -5,8 +5,6 @@ item.vajram.name=Vajra Max
 #Modules
 item.upgrade.hoe.name=Module Hoe (Lvl 1)
 item.upgrade.automelting.name=Module Auto-Melting (Lvl 1)
-item.moduleexpansionDig.name=Module Expansion Dig (Lvl 1)
-item.moduleattackradius.name=Module Attack Radius (Lvl 1)
 item.upgrade.depths.name=Module Depth 3x3 (Lvl 1)
 item.upgrade.depth1.name=Module Depth 5x5 (Lvl 2)
 item.upgrade.depth2.name=Module Depth 7x7 (Lvl 3)
@@ -42,6 +40,7 @@ block.guitoolstation.with=with "Hoe" modules
 
 key.vajrapro.category=VajraPro
 key.changedepths=Сhange depths
+key.changeautosmelt=Change Auto-Smelt
 
 info.radius=Radius:
 info.depth=Depth:
@@ -53,5 +52,4 @@ info.automelting=Auto-Melting:
 info.hoeandsilktouch=The «Hoe» module is incompatible with the «Silk Touch» module.
 info.hoeandsilktouch1=The «Hoe» module and «Silk Touch» is
 info.depthisnow=Depth is now:
-info.about.modules=Activate modules in ToolStation
 

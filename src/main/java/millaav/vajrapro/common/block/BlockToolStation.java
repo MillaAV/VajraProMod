@@ -16,6 +16,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
+import static millaav.vajrapro.ItemVajra.tabVajraPro;
+
 public class BlockToolStation extends Block {
     @SideOnly(Side.CLIENT)
     private IIcon front;
@@ -27,7 +29,7 @@ public class BlockToolStation extends Block {
     private IIcon topBottom;
     public BlockToolStation() {
         super(Material.iron);
-        this.setCreativeTab(IC2.tabIC2);
+        this.setCreativeTab(tabVajraPro);
         this.setBlockName("toolStantion");
         this.setHardness(5.0F);
         this.setResistance(10.0F);

@@ -36,4 +36,5 @@ repositories {
 }
 
 dependencies {
+	compile name: 'industrialcraft-2-deobf'
 }

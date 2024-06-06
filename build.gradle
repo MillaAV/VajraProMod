@@ -14,9 +14,9 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0"
+version = "1.1"
 group= ""
-archivesBaseName = "MillaAVMod"
+archivesBaseName = "VajraPro"
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 sourceCompatibility = targetCompatibility = '1.8'
@@ -36,11 +36,4 @@ repositories {
 }
 
 dependencies {
-	compile name: 'industrialcraft-2-deobf'
-	compile name: 'CodeChickenCore-1.7.10-1.0.7.48-universal-deobf'
-    	compile name: 'LuckyRecipeMaker-1.0-deobf'
-    	compile name: 'minetweaker3-1.7.10-3.0.10b-deobf'
-    	compile name: 'NotEnoughItems-1.7.10-1.0.5.120-universal-deobf'
-    	compile name: 'codechickenlib-1.2.1-deobf'
-	compile name: 'gravisuite-1.7.10-2.0.3-deobf'
 }

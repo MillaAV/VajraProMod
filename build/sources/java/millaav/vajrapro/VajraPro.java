@@ -15,7 +15,7 @@ import net.minecraft.world.World;
         modid = "vajrapro",
         name = "Vajra Pro",
         dependencies = "required-after:IC2; after:RedPowerCore",
-        version = "1.0.0"
+        version = "1.1.0"
 )
 public class VajraPro {
 

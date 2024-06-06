@@ -9,9 +9,12 @@ import ic2.api.item.IElectricItem;
 import millaav.vajrapro.common.Item.ConfigTest;
 import millaav.vajrapro.common.Item.EnumUpgradeType;
 import millaav.vajrapro.common.Item.Hoe;
+import millaav.vajrapro.common.Item.ItemVajraM;
+import millaav.vajrapro.common.registry.ItemRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.client.Minecraft;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -537,6 +540,21 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         if(vajra.stackTagCompound==null) return false;
         return vajra.stackTagCompound.hasKey(type.key);
     }
+
+    public static CreativeTabs tabVajraPro = new CreativeTabs("tabVajraPro")
+    {
+        @Override
+        public ItemStack getIconItemStack()
+        {
+            return new ItemStack(ItemRegistry.vajraM, 1, 0);
+        }
+
+        @Override
+        public Item getTabIconItem()
+        {
+            return ItemRegistry.vajraM;
+        }
+    };
 
     public static void removeUpgrade(ItemStack vajra, ItemStack upgrade){
         if(vajra.stackTagCompound==null) return;

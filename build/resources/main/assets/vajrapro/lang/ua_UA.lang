@@ -33,6 +33,7 @@ ic2.goldplatedenergycrystal=Золото-покритий енергетични
 
 #Блоки
 tile.toolStantion.name=Модульна Станція
+itemGroup.tabVajraPro=Vajra Pro
 
 #Текст
 block.guitoolstation.name=Станція Інструментів

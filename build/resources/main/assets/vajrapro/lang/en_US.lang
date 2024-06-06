@@ -32,6 +32,7 @@ ic2.goldplatedenergycrystal=Gold-plated energy crystal
 
 #Blocks
 tile.toolStantion.name=Module Stantion
+itemGroup.tabVajraPro=Vajra Pro
 
 #Text
 block.guitoolstation.name=Tool Station

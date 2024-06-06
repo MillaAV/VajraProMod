@@ -31,6 +31,7 @@ ic2.goldplatedenergycrystal=Cristal de energía bañado en oro
 
 #Blocks
 tile.toolStantion.name=Estación Módulos
+itemGroup.tabVajraPro=Vajra Pro
 
 #Text
 block.guitoolstation.name=Estación Módulos

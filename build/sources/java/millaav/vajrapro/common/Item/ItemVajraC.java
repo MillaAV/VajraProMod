@@ -3,7 +3,6 @@ package millaav.vajrapro.common.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import ic2.api.item.IElectricItem;
-import ic2.core.IC2;
 import millaav.vajrapro.ItemVajra;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.EnumRarity;
@@ -20,7 +19,7 @@ public class ItemVajraC extends ItemVajra implements IElectricItem {
         this.effPower = 2000.0F;
         this.efficiencyOnProperMaterial = this.effPower;
         this.epo = 3333;
-        this.setCreativeTab(IC2.tabIC2);;
+        this.setCreativeTab(tabVajraPro);
     }
 
     @SideOnly(Side.CLIENT)

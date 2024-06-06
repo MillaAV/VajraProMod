@@ -32,6 +32,7 @@ item.tier1upgrade.name=Улучшение ваджры (Lvl 1)
 item.tier2upgrade.name=Улучшение ваджры (Lvl 2)
 
 tile.toolStantion.name=Модульная станция
+itemGroup.tabVajraPro=Vajra Pro
 
 block.guitoolstation.name=Модульная станция
 block.guitoolstation.skto=Модуль "Шелковое касание" не совместим

@@ -37,4 +37,7 @@ repositories {
 
 dependencies {
 	compile name: 'industrialcraft-2-deobf'
+	compile name: 'NotEnoughItems-1.7.10-1.0.5.120-universal-deobf'
+	compile name: 'CodeChickenCore-1.7.10-1.0.7.48-universal-deobf'
+	compile name: 'codechickenlib-1.2.1-deobf'
 }

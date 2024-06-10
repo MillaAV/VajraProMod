@@ -560,4 +560,5 @@ public class ItemVajra extends ItemTool implements IElectricItem {
         if(vajra.stackTagCompound==null) return;
         vajra.stackTagCompound.removeTag(EnumUpgradeType.values()[upgrade.getItemDamage()].key);
     }
+
 }

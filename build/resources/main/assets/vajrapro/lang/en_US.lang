@@ -54,3 +54,24 @@ info.hoeandsilktouch=The «Hoe» module is incompatible with the «Silk Touch» 
 info.hoeandsilktouch1=The «Hoe» module and «Silk Touch» is
 info.depthisnow=Depth is now:
 
+
+
+info.about.modules=To install this module, use Tool Stantion
+info.about.automelting.modules=Melts blocks. Compatible with the Fortune module.
+info.about.automelting.modules1=Can turn off (Button changes in game settings)
+info.about.silktouch.modules=Allows to get a block without destroying it
+info.about.silktouch.modules1=Activated with right mouse button
+info.about.silktouch.modules2=Not compatible with the "Hoe" module
+info.about.range.modules=Increases attack radius to 5 blocks
+info.about.fortuna.modules=Increases fortuna to 3
+info.about.depths.modules=Increases digging depth to 3 blocks
+info.about.damage.modules=Increases damage to 21
+info.about.hoe.modules=Hoe. It's just hoe...
+info.about.hoe.modules1=Activated with right mouse button
+info.about.hoe.modules2=Not compatible with the "Silk Touch" module
+info.about.damage1.modules=Increases damage to 61
+info.about.damage2.modules=Increases damage to 121
+info.about.depth1.modules=Increases digging depth to 5 blocks
+info.about.depth2.modules=Increases digging depth to 7 blocks
+info.about.fortuna1.modules=Increases fortuna to 5
+info.about.fortuna2.modules=Increases fortuna to 10

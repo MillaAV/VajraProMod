@@ -52,3 +52,24 @@ info.automelting=Automática:
 info.hoeandsilktouch=El módulo «Azada» es incompatible con el módulo «Silk Touch».
 info.hoeandsilktouch1=El módulo «Azada» y «Silk Touch» Discapacitados
 info.depthisnow=Profundidad es ahora:
+
+
+info.about.modules=Para instalar este módulo, utilice el soporte de herramientas
+info.about.automelting.modules=Derrite bloques. Compatible con el módulo Fortune.
+info.about.automelting.modules1=Se puede apagar (cambios de botones en la configuración del juego)
+info.about.silktouch.modules=Permite obtener un bloque sin destruirlo
+info.about.silktouch.modules1=Activado con el botón derecho del ratón
+info.about.silktouch.modules2=No es compatible con el módulo "Azada"
+info.about.range.modules=Aumenta el radio de ataque a 5 bloques.
+info.about.fortuna.modules=Aumenta fortuna a 3
+info.about.depths.modules=Aumenta la profundidad de excavación a 3 bloques.
+info.about.damage.modules=Aumenta el daño a 21
+info.about.hoe.modules=Azada. Es solo Azada...
+info.about.hoe.modules1=Activado con el botón derecho del ratón
+info.about.hoe.modules2=No es compatible con el módulo" Silk Touch"
+info.about.damage1.modules=Aumenta el daño a 61
+info.about.damage2.modules=Aumenta el daño a 121
+info.about.depth1.modules=Aumenta la profundidad de excavación a 5 bloques.
+info.about.depth2.modules=Aumenta la profundidad de excavación a 7 bloques.
+info.about.fortuna1.modules=Aumenta fortuna a 5
+info.about.fortuna2.modules=Aumenta fortuna a 10

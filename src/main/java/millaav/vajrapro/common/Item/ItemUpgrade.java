@@ -4,6 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -35,6 +36,8 @@ public class ItemUpgrade extends Item {
         int i = MathHelper.clamp_int(stack.getItemDamage(), 0, 15);
         return super.getUnlocalizedName() + "." + EnumUpgradeType.values()[i].key;
     }
+
+    public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean par4) {ModulesInfo.addInfoToUpgrade(stack, info);}
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {

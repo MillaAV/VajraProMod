@@ -53,3 +53,24 @@ info.automelting=Авто-переплавка:
 info.hoeandsilktouch=Модуль «Мотыга» не совместим с модулем «Шелковое касание».
 info.hoeandsilktouch1=Модули «Шелковое касание» и «Мотыга»
 info.depthisnow=Режим копания глубины:
+
+
+info.about.modules=Чтобы установить этот модуль, используйте "Модульную станцию"
+info.about.automelting.modules=Переплавляет блоки. Совместим с модулем Удача.
+info.about.automelting.modules1=Можно отключить (кнопка изменения в настройках игры)
+info.about.silktouch.modules=Позволяет получить блок, не разрушая его
+info.about.silktouch.modules1=Активируется правой кнопкой мыши
+info.about.silktouch.modules2=Не совместим с модулем "Мотыга"
+info.about.range.modules=Увеличивает радиус атаки до 5 блоков
+info.about.fortuna.modules=Увеличивает удачу до 3
+info.about.depths.modules=Увеличивает глубину копания до 3 блоков
+info.about.damage.modules=Увеличивает урон на 21
+info.about.hoe.modules=Мотыга. Это всего лишь мотыга...
+info.about.hoe.modules1=Активируется правой кнопкой мыши
+info.about.hoe.modules2=Не совместим с модулем "Шелковое касание"
+info.about.damage1.modules=Увеличивает урон до 61
+info.about.damage2.modules=Увеличивает урон до 121
+info.about.depth1.modules=Увеличивает глубину копания до 5 блоков
+info.about.depth2.modules=Увеличивает глубину копания до 7 блоков
+info.about.fortuna1.modules=Увеличивает удачу до 5
+info.about.fortuna2.modules=Увеличивает удачу до 10

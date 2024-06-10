@@ -53,3 +53,24 @@ info.automelting=Auto-Umschmelzen:
 info.hoeandsilktouch=Das Modul «Hacke» ist nicht mit dem Modul «Seide berühren» kompatibel.
 info.hoeandsilktouch1=Das «Hacke» Modul und «Seide berühren» ist
 info.depthisnow=Tiefe ist jetzt:
+
+
+info.about.modules=Pour installer ce module, utilisez Tool Station
+info.about.automelting.modules=Blocs d'éperlans. Compatible avec le module Fortune.
+info.about.automelting.modules1=Peut s'éteindre (Bouton change dans les paramètres du jeu)
+info.about.silktouch.modules=Permet d'obtenir un bloc sans le détruire
+info.about.silktouch.modules1=Activé avec le bouton droit de la souris
+info.about.silktouch.modules2=Non compatible avec le module "Houe"
+info.about.range.modules=Augmente le rayon d'attaque à 5 blocs
+info.about.fortuna.modules=Augmente la fortune à 3
+info.about.depths.modules=Augmente la profondeur de creusement à 3 blocs
+info.about.damage.modules=Augmente les dégâts à 21
+info.about.hoe.modules=Houe. C'est juste de la houe...
+info.about.hoe.modules1=Activé avec le bouton droit de la souris
+info.about.hoe.modules2=Non compatible avec le module "Silk Touch"
+info.about.damage1.modules=Augmente les dégâts à 61
+info.about.damage2.modules=Augmente les dégâts à 121
+info.about.depth1.modules=Augmente la profondeur de creusement à 5 blocs
+info.about.depth2.modules=Augmente la profondeur de creusement à 7 blocs
+info.about.fortuna1.modules=Augmente la fortune à 5
+info.about.fortuna2.modules=Augmente la fortune à 10
